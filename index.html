@@ -64,11 +64,11 @@
     <header id="home" class="header slider-fade" data-scroll-index="0">
         <div class="owl-carousel owl-theme">
             <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-            <div class="text-end item bg-img" data-overlay-dark="3" data-background="img/slider/5.jpg">
+            <div class="text-end item bg-img" data-overlay-dark="5" data-background="img/slider/5.jpg">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-7 offset-md-5">
+                            <div class="col-md-7 offset-md-6">
                                 <h1 class="estate-name"><span class="capital" style="font-size: 140%;">V</span>aleria <span class="capital" style="font-size: 140%;">V</span>illas</h1>
                                 <p>
                                   <strong style="font-size: 100%;">4-BEDROOM MASIONETTES</strong>
@@ -81,11 +81,11 @@
                     </div>
                 </div>
             </div>
-            <div class="text-end item bg-img" data-overlay-dark="4" data-background="img/slider/6.jpg">
+            <div class="text-end item bg-img" data-overlay-dark="5" data-background="img/slider/6.jpg">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-7 offset-md-5">  
+                            <div class="col-md-7 offset-md-6">  
                                 <h1 class="estate-name"><span class="capital" style="font-size: 140%;">V</span>aleria <span class="capital" style="font-size: 140%;">V</span>illas</h1>
                                 <p>
                                   <strong style="font-size: 100%;">4-BEDROOM MASIONETTES</strong>
@@ -98,11 +98,11 @@
                     </div>
                 </div>
             </div>
-            <div class="text-end item bg-img" data-overlay-dark="4" data-background="img/slider/7.jpg">
+            <div class="text-end item bg-img" data-overlay-dark="5" data-background="img/slider/7.jpg">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-7 offset-md-5">  
+                            <div class="col-md-7 offset-md-6">  
                                 <h1 class="estate-name"><span class="capital" style="font-size: 140%;">V</span>aleria <span class="capital" style="font-size: 140%;">V</span>illas</h1>
                                 <p>
                                   <strong style="font-size: 100%;">4-BEDROOM MASIONETTES</strong>
@@ -115,11 +115,11 @@
                     </div>
                 </div>
             </div>
-            <div class="text-end item bg-img" data-overlay-dark="4" data-background="img/slider/8.jpg">
+            <div class="text-end item bg-img" data-overlay-dark="5" data-background="img/slider/8.jpg">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-7 offset-md-5">  
+                            <div class="col-md-7 offset-md-6">  
                                 <h1 class="estate-name"><span class="capital" style="font-size: 140%;">V</span>aleria <span class="capital" style="font-size: 140%;">V</span>illas</h1>
                                 <p>
                                   <strong style="font-size: 100%;">4-BEDROOM MASIONETTES</strong>
@@ -218,8 +218,15 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <img src="img/icons/icon-1.png" alt="">
-                                <button style="background:none;"><h5 onclick="toggleDescription1()">Restaurants & Hotels</h5></button>
+                                <div class="icon-container">
+                                    <img src="img/icons/icon-1.png" alt="">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription1()">Restaurants & Hotels</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
                                 <p id="restaurant-description" class="description">
                                     Nestled in a prime location in Ruiru, the estate is near an array of top-notch dining and hospitality options. Whether you're looking for a quick bite 
@@ -232,8 +239,15 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <img src="img/icons/icon-2.png" alt="">
-                                <button style="background:none;"><h5 onclick="toggleDescription2()">Shopping Malls</h5></button>
+                                <div class="icon-container">
+                                    <img src="img/icons/icon-2.png" alt="">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription2()">Shopping Malls</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
                                 <p id="mall-description" class="description">
                                     Conveniently located near Thika Superhighway, the estate offers unparalleled access to some of the region’s premiere shopping destinations. These malls also 
@@ -245,8 +259,16 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <img src="img/icons/icon-3.png" alt="">
-                                <button style="background:none;"><h5 onclick="toggleDescription3()">Schools</h5></button>
+                                <div class="icon-container">
+                                    <img src="img/icons/icon-3.png" alt="">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription3()">Schools</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
                                 <div class="line"></div>
                                 <p id="school-description" class="description">
                                     The estate's location offers easy access to a variety of reputable schools and universities. Nearby, you'll find Mountain View School 
@@ -258,8 +280,16 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <img src="img/icons/icon-3.png" alt="">
-                                <button style="background:none;"><h5 onclick="toggleDescription4()">Recreational Facilities</h5></button>
+                                <div class="icon-container">
+                                    <img src="img\clients\6.png" alt="">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription4()">Recreational Facilities</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
                                 <div class="line"></div>
                                 <p id="recreation-description" class="description">
                                     The estate is surrounded by a range of recreational facilities that make leisure time both enjoyable and convenient. The nearby Thika Road and its environs 
@@ -271,8 +301,15 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <img src="img/icons/icon-3.png" alt="">
-                                <button style="background:none;"><h5 onclick="toggleDescription5()">Hospitals</h5></button>
+                                <div class="icon-container">
+                                    <img src="img/clients/1.png" alt="">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription5()">Hospitals</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
                                 <p id="hospital-description" class="description">
                                     Due to being located in a highly growing area along eastern by-pass, the location of the estate offers ease of access to medical facilities like RFH hospital which is just 2 kilometers away. This offers
@@ -284,8 +321,15 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <img src="img/icons/icon-3.png" alt="">
-                                <button style="background:none;"><h5 onclick="toggleDescription6()">Accessibility</h5></button>
+                                <div class="icon-container">
+                                    <img style="height:39px; width:50px"  src="img/clients/7.png" alt="">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription6()">Accessibility</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
                                 <p id="accessibility-description" class="description">
                                     Conveniently located just 100 metres from Eastern by-pass and 6 kilometers from Thika superhighway at Ruiru round-about, the estate offers ease of access for both commuting to work and 
@@ -345,63 +389,117 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <h5>Luxurious Living Spaces</h5>
+                                <div class="icon-container">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription7()">Luxurious Living Spaces</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
-                                <p>Each maisonette offers spacious and elegantly designed living areas, perfect for families or individuals 
+                                <p id="luxurious-description" class="description">
+                                    Each maisonette offers spacious and elegantly designed living areas, perfect for families or individuals 
                                     seeking comfort and style. With 4 bedrooms and 3 lounges, there's ample space for relaxation and entertainment, 
-                                    ensuring every member of the household has their own private retreat.</p>
+                                    ensuring every member of the household has their own private retreat.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <h5>High-Quality Construction</h5>
+                                <div class="icon-container">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription8()">High-Quality Construction</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
-                                <p>Built with precision and attention to detail, these maisonettes showcase high-quality craftsmanship and premium materials. 
-                                    From the foundation to the finishing touches, every aspect of the construction is designed to withstand the test of time.</p>
+                                <p id="construction-description" class="description">
+                                    Built with precision and attention to detail, these maisonettes showcase high-quality craftsmanship and premium materials. 
+                                    From the foundation to the finishing touches, every aspect of the construction is designed to withstand the test of time.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <h5>Prime Location</h5>
+                                <div class="icon-container">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription9()">Prime Location</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
-                                <p>Situated in a desirable location, the estate offers convenience and accessibility to key amenities such as schools, 
+                                <p id="location-description" class="description">
+                                    Situated in a desirable location, the estate offers convenience and accessibility to key amenities such as schools, 
                                     shopping centers, restaurants, and recreational facilities. Whether clients are commuting to work or exploring the 
-                                    local area, everything they need is just a stone-throw away.</p>
+                                    local area, everything they need is just a stone-throw away.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <h5>Privacy and Security</h5>
+                                <div class="icon-container">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription10()">Privacy and Security</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
-                                <p>The estate provides a secure and private environment for residents, with gated access and surveillance systems ensuring peace of 
-                                    mind at all times. Families can relax knowing that their safety and privacy are top priorities within the community.</p>
+                                <p id="security-description" class="description">
+                                    The estate provides a secure and private environment for residents, with gated access and surveillance systems ensuring peace of 
+                                    mind at all times. Families can relax knowing that their safety and privacy are top priorities within the community.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <h5>Customization Options</h5>
+                                <div class="icon-container">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription11()">Customization Options</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
-                                <p>Depending on the stage of construction, buyers may have the opportunity to customize certain features of their maisonette, allowing 
-                                    them to personalize their living space and create a home that truly reflects their unique style and preferences.</p>
+                                <p id="customization-description" class="description">
+                                    Depending on the stage of construction, buyers may have the opportunity to customize certain features of their maisonette, allowing 
+                                    them to personalize their living space and create a home that truly reflects their unique style and preferences.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="item">
                             <div>
-                                <h5>Detached SQ</h5>
+                                <div class="icon-container">
+                                    <div style="width: 336px;">
+                                        <button class="drop-button">
+                                            <h5 onclick="toggleDescription12()">Detached SQ</h5>
+                                            <i class="ti-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="line"></div>
-                                <p>For clients who value privacy and independence, each unit offers the added convenience of a detached servants' quarters. 
+                                <p id="quarters-description" class="description">
+                                    For clients who value privacy and independence, each unit offers the added convenience of a detached servants' quarters. 
                                     This separate living space provides accommodation for household staff or guests, ensuring that residents can enjoy their 
-                                    main residence without compromise.</p>
+                                    main residence without compromise.
+                                </p>
                             </div>
                         </div>
                     </div>

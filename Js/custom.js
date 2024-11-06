@@ -521,3 +521,34 @@ function toggleDescription6() {
     const description6 = document.getElementById('accessibility-description');
     description6.classList.toggle('show');
 }
+
+function toggleDescription7() {
+    const description6 = document.getElementById('luxurious-description');
+    description6.classList.toggle('show');
+}
+
+function toggleDescription8() {
+    const description6 = document.getElementById('construction-description');
+    description6.classList.toggle('show');
+}
+
+function toggleDescription9() {
+    const description6 = document.getElementById('location-description');
+    description6.classList.toggle('show');
+}
+
+function toggleDescription10() {
+    const description6 = document.getElementById('security-description');
+    description6.classList.toggle('show');
+}
+
+function toggleDescription11() {
+    const description6 = document.getElementById('customization-description');
+    description6.classList.toggle('show');
+}
+
+function toggleDescription12() {
+    const description6 = document.getElementById('quarters-description');
+    description6.classList.toggle('show');
+}
+

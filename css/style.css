@@ -1548,7 +1548,7 @@ blockquote cite:before {
 
 /* ======= Services style ======= */
 .services .item {
-    padding: 30px 30px;
+    padding: 10px 10px;
     margin-bottom: 0px;
     position: relative;
 }
@@ -1561,6 +1561,7 @@ blockquote cite:before {
 }
 .services .item h5 {
     font-size: 16px;
+    width: 100%;
     font-weight: 300;
     margin-bottom: 15px;
     color: #fff;
@@ -1585,6 +1586,18 @@ blockquote cite:before {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
     line-height: 1em;
 }
+
+.drop-button{
+    background:none;
+    width:100%;
+    display:flex;
+}
+
+.drop-button h5{
+    display: flex;
+    align-items: flex-start;
+}
+
 /* line animation */
 .services .item .line {
     width: 100%;
@@ -1610,6 +1623,14 @@ blockquote cite:before {
     transition-property: all;
     transition-duration: 0.8s;
     transition-timing-function: ease-in-out;
+}
+
+.icon-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: fit-content;
+    align-items: flex-start;
 }
 
 .description {
