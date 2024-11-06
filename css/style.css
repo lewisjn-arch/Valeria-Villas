@@ -18,22 +18,12 @@
  16. Team Details style
  17. Careers style
  18. Services style
- 
- 
- 
  22. Projects style
- 
- 
- 
- 
  27. Project Page style 
  28. Clients style
  29. Gallery style
  30. Promo Video and Testimonials style
- 31. Blog
- 
- 
- 
+ 31. Blog 
  35. Post style
  36. Contact style
  37. Buttons style
@@ -44,8 +34,7 @@
  42. Accordion Box (for Faqs) style
  43. Pricing plan style
  44. Error Page - 404 style
- 45. Process style
-  
+ 45. Process style  
  47. Comming soon style
  48. Overlay Effect Bg image style - [NEW]
  49. Responsive (Media Query)
@@ -1555,12 +1544,9 @@ blockquote cite:before {
 .services .item:hover {
     background: #323232;
 }
-.services .item:hover .numb {
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(177, 151, 119, 0.5);
-}
+
 .services .item h5 {
-    font-size: 16px;
+    font-size: 100%;
     width: 100%;
     font-weight: 300;
     margin-bottom: 15px;
@@ -1574,17 +1560,6 @@ blockquote cite:before {
 .services .item img {
     width: 60px;
     margin-bottom: 20px;
-}
-.services .item .numb {
-    font-size: 40px;
-    font-weight: 600;
-    font-family: 'Oswald', sans-serif;
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
-    line-height: 1em;
 }
 
 .drop-button{
@@ -2059,6 +2034,48 @@ button.mfp-arrow {
 
 
 /* ======= Promo Video and Testimonials style ======= */
+/* testimonials style */
+.testimonials-box {
+    position: relative;
+    background: #272727;
+    padding: 60px 45px;
+    margin-bottom: -90px;
+}
+.testimonials-box .head-box h6 {
+    font-weight: 400;
+    color: #999;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.testimonials-box .head-box h4 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 5px;
+    border-bottom: 1px solid #373737;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+.testimonials-box .head-box h4 span {
+    color: #fff;
+}
+
+.google-map {
+    height: 500px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    margin-top: 44px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
 /* play button */
 .vid-area h5 {
     font-size: 20px;
