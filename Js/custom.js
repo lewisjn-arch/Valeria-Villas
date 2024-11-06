@@ -492,3 +492,32 @@ function closeVideoModal() {
     document.querySelector('.navbar').classList.remove('navbar-hidden');
 }
 
+function toggleDescription1() {
+    const description1 = document.getElementById('restaurant-description');
+    description1.classList.toggle('show');
+}
+
+function toggleDescription2() {
+    const description2 = document.getElementById('mall-description');
+    description2.classList.toggle('show');
+}
+
+function toggleDescription3() {
+    const description3 = document.getElementById('school-description');
+    description3.classList.toggle('show');
+}
+
+function toggleDescription4() {
+    const description4 = document.getElementById('recreation-description');
+    description4.classList.toggle('show');
+}
+
+function toggleDescription5() {
+    const description5 = document.getElementById('hospital-description');
+    description5.classList.toggle('show');
+}
+
+function toggleDescription6() {
+    const description6 = document.getElementById('accessibility-description');
+    description6.classList.toggle('show');
+}

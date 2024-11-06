@@ -217,10 +217,12 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="item">
-                            <div><img src="img/icons/icon-1.png" alt="">
-                                <h5>Restaurants & Hotels</h5>
+                            <div>
+                                <img src="img/icons/icon-1.png" alt="">
+                                <button style="background:none;"><h5 onclick="toggleDescription1()">Restaurants & Hotels</h5></button>
                                 <div class="line"></div>
-                                <p>Nestled in a prime location in Ruiru, the estate is near an array of top-notch dining and hospitality options. Whether you're looking for a quick bite 
+                                <p id="restaurant-description" class="description">
+                                    Nestled in a prime location in Ruiru, the estate is near an array of top-notch dining and hospitality options. Whether you're looking for a quick bite 
                                     or a fine dining experience, the surrounding area has diverse restaurants offering local delicacies, while being close
                                     to Greenspot gardens, famous for its roast meat.
                                 </p>
@@ -229,10 +231,12 @@
                     </div>
                     <div class="col-md-4">
                         <div class="item">
-                            <div><img src="img/icons/icon-2.png" alt="">
-                                <h5>Shopping Malls</h5>
+                            <div>
+                                <img src="img/icons/icon-2.png" alt="">
+                                <button style="background:none;"><h5 onclick="toggleDescription2()">Shopping Malls</h5></button>
                                 <div class="line"></div>
-                                <p>Conveniently located near Thika Superhighway, the estate offers unparalleled access to some of the region’s premiere shopping destinations. These malls also 
+                                <p id="mall-description" class="description">
+                                    Conveniently located near Thika Superhighway, the estate offers unparalleled access to some of the region’s premiere shopping destinations. These malls also 
                                     feature entertainment facilities, food courts and children’s play zones, making them ideal for both shopping trips and family outings.
                                 </p>
                             </div>
@@ -240,20 +244,25 @@
                     </div>
                     <div class="col-md-4">
                         <div class="item">
-                            <div><img src="img/icons/icon-3.png" alt="">
-                                <h5>Schools</h5>
+                            <div>
+                                <img src="img/icons/icon-3.png" alt="">
+                                <button style="background:none;"><h5 onclick="toggleDescription3()">Schools</h5></button>
                                 <div class="line"></div>
-                                <p>The estate's location offers easy access to a variety of reputable schools and universities. Nearby, you'll find Mountain View School and Kasarani Group of Schools. For higher education, the estate is within reach of top-tier universities such as JKUAT (Jomo Kenyatta University of Agriculture and Technology) and Kenyatta University.
+                                <p id="school-description" class="description">
+                                    The estate's location offers easy access to a variety of reputable schools and universities. Nearby, you'll find Mountain View School 
+                                    and Kasarani Group of Schools. For higher education, the estate is within reach of top-tier universities such as JKUAT (Jomo Kenyatta University of Agriculture and Technology) and Kenyatta University.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="item">
-                            <div><img src="img/icons/icon-3.png" alt="">
-                                <h5>Recreational Facilities</h5>
+                            <div>
+                                <img src="img/icons/icon-3.png" alt="">
+                                <button style="background:none;"><h5 onclick="toggleDescription4()">Recreational Facilities</h5></button>
                                 <div class="line"></div>
-                                <p>The estate is surrounded by a range of recreational facilities that make leisure time both enjoyable and convenient. The nearby Thika Road and its environs 
+                                <p id="recreation-description" class="description">
+                                    The estate is surrounded by a range of recreational facilities that make leisure time both enjoyable and convenient. The nearby Thika Road and its environs 
                                     also offer entertainment options such as cinemas, bowling alleys, and golf courses for those looking for an active lifestyle or a fun outing.
                                 </p>
                             </div>
@@ -261,10 +270,12 @@
                     </div>
                     <div class="col-md-4">
                         <div class="item">
-                            <div><img src="img/icons/icon-3.png" alt="">
-                                <h5>Hospitals</h5>
+                            <div>
+                                <img src="img/icons/icon-3.png" alt="">
+                                <button style="background:none;"><h5 onclick="toggleDescription5()">Hospitals</h5></button>
                                 <div class="line"></div>
-                                <p>Due to being located in a highly growing area along eastern by-pass, the location of the estate offers ease of access to medical facilities like RFH hospital which is just 2 kilometers away. This offers
+                                <p id="hospital-description" class="description">
+                                    Due to being located in a highly growing area along eastern by-pass, the location of the estate offers ease of access to medical facilities like RFH hospital which is just 2 kilometers away. This offers
                                     perfect access in case of any medical emergencies.
                                 </p>
                             </div>
@@ -272,15 +283,17 @@
                     </div>
                     <div class="col-md-4">
                         <div class="item">
-                            <div><img src="img/icons/icon-3.png" alt="">
-                                <h5>Accessibility</h5>
+                            <div>
+                                <img src="img/icons/icon-3.png" alt="">
+                                <button style="background:none;"><h5 onclick="toggleDescription6()">Accessibility</h5></button>
                                 <div class="line"></div>
-                                <p>Conveniently located just 100 metres from Eastern by-pass and 6 kilometers from Thika superhighway at Ruiru round-about, the estate offers ease of access for both commuting to work and 
+                                <p id="accessibility-description" class="description">
+                                    Conveniently located just 100 metres from Eastern by-pass and 6 kilometers from Thika superhighway at Ruiru round-about, the estate offers ease of access for both commuting to work and 
                                     driving to and from work. The estate also easily accessible for school transportation for children living in the estate.
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </section>
@@ -396,7 +409,7 @@
             </div>
         </section>
         <!-- Blog -->
-        <section id="blog" class="bauen-blog section-padding" data-scroll-index="5">
+        <!-- <section id="blog" class="bauen-blog section-padding" data-scroll-index="5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -442,7 +455,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Contact -->
         <section id="contact" class="section-padding" data-scroll-index="6">
             <div class="container">
