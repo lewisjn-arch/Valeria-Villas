@@ -552,3 +552,62 @@ function toggleDescription12() {
     description6.classList.toggle('show');
 }
 
+function toggleArrow1() {
+    const arrow1 = document.getElementById('drop-arrow1');
+    arrow1.classList.toggle('rotate');
+}
+
+function toggleArrow2() {
+    const arrow2 = document.getElementById('drop-arrow2');
+    arrow2.classList.toggle('rotate');
+}
+
+function toggleArrow3() {
+    const arrow3 = document.getElementById('drop-arrow3');
+    arrow3.classList.toggle('rotate');
+}
+
+function toggleArrow4() {
+    const arrow4 = document.getElementById('drop-arrow4');
+    arrow4.classList.toggle('rotate');
+}
+
+function toggleArrow5() {
+    const arrow5 = document.getElementById('drop-arrow5');
+    arrow5.classList.toggle('rotate');
+}
+
+function toggleArrow6() {
+    const arrow6 = document.getElementById('drop-arrow6');
+    arrow6.classList.toggle('rotate');
+}
+
+function toggleArrow7() {
+    const arrow7 = document.getElementById('drop-arrow7');
+    arrow7.classList.toggle('rotate');
+}
+
+function toggleArrow8() {
+    const arrow8 = document.getElementById('drop-arrow8');
+    arrow8.classList.toggle('rotate');
+}
+
+function toggleArrow9() {
+    const arrow9 = document.getElementById('drop-arrow9');
+    arrow9.classList.toggle('rotate');
+}
+
+function toggleArrow10() {
+    const arrow10 = document.getElementById('drop-arrow10');
+    arrow10.classList.toggle('rotate');
+}
+
+function toggleArrow11() {
+    const arrow11 = document.getElementById('drop-arrow11');
+    arrow11.classList.toggle('rotate');
+}
+
+function toggleArrow12() {
+    const arrow12 = document.getElementById('drop-arrow12');
+    arrow12.classList.toggle('rotate');
+}

@@ -317,6 +317,7 @@ blockquote cite:before {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .bg-fixed {
     background-attachment: fixed;
 }
@@ -348,6 +349,13 @@ blockquote cite:before {
 }
 .js .animate-box {
     opacity: 0;
+}
+
+@media (max-width: 576px){
+    .js .animate-box{
+        padding:0 5%;
+    }
+
 }
 
 .map {	
@@ -461,6 +469,13 @@ blockquote cite:before {
     letter-spacing: 10px;
     word-spacing: 5px;
     margin-bottom: 30px;
+}
+
+@media (max-width:576px){
+    .section-title{
+        width: 100%;
+        padding: 0 5%;
+    }
 }
 .section-title span {
     color: #b19777;
@@ -1399,7 +1414,7 @@ blockquote cite:before {
     display: -ms-flexbox;
     display: flex;
     margin-top: -1px;
-    padding: 40px 45px 40px 50px;
+    padding: 2% 0;
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
     border-top: 1px solid #323232;
@@ -1422,7 +1437,7 @@ blockquote cite:before {
     z-index: 1;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     height: 100%
 }
 .position-title {
@@ -1497,6 +1512,18 @@ blockquote cite:before {
 .position:hover .position-icon {
     color: #fff;
 }
+
+@media (max-width:576px){
+    .position{
+        width: 371.75px;
+        margin: auto;
+        padding: 10% 0 10% 2%;
+    }
+    .position-link{
+        width: 371.75px;
+        margin: auto;
+    }
+}
 @media only screen and (max-width:991px) {
     .position {
         flex-direction: column;
@@ -1537,9 +1564,15 @@ blockquote cite:before {
 
 /* ======= Services style ======= */
 .services .item {
-    padding: 10px 10px;
+    padding: 10px 0;
     margin-bottom: 0px;
     position: relative;
+}
+@media (max-width: 576px){
+    .services .item{
+        width: 95%;
+        margin: auto;
+    }
 }
 .services .item:hover {
     background: #323232;
@@ -1553,6 +1586,7 @@ blockquote cite:before {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 5px;
+    overflow-wrap: normal;
 }
 .services .item p {
     margin-bottom: 0;
@@ -1571,6 +1605,20 @@ blockquote cite:before {
 .drop-button h5{
     display: flex;
     align-items: flex-start;
+}
+
+#drop-arrow1, #drop-arrow2, #drop-arrow3, #drop-arrow4,
+#drop-arrow5, #drop-arrow6, #drop-arrow7, #drop-arrow8,
+#drop-arrow9, #drop-arrow10, #drop-arrow11, #drop-arrow12{
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+#drop-arrow1.rotate, #drop-arrow2.rotate, #drop-arrow3.rotate,
+#drop-arrow4.rotate, #drop-arrow5.rotate, #drop-arrow6.rotate,
+#drop-arrow7.rotate, #drop-arrow8.rotate, #drop-arrow9.rotate,
+#drop-arrow10.rotate, #drop-arrow11.rotate, #drop-arrow12.rotate{
+    transform: rotate(180deg);
 }
 
 /* line animation */
