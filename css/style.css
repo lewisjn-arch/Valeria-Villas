@@ -1414,7 +1414,7 @@ blockquote cite:before {
     display: -ms-flexbox;
     display: flex;
     margin-top: -1px;
-    padding: 2% 0;
+    padding: 2% 2%;
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
     border-top: 1px solid #323232;
