@@ -1256,7 +1256,7 @@ blockquote cite:before {
 
 
 /* =======  Content Lines style  ======= */
-.content-wrapper {
+/* .content-wrapper {
     position: relative;
 }
 .content-lines-wrapper {
@@ -1284,9 +1284,7 @@ blockquote cite:before {
     height: 100%;
     border-left: 1px solid #323232;
     border-right: 1px solid #323232;
-}
-
-
+} */
 
 
 /* =======  Video Background  ======= */

@@ -611,3 +611,4 @@ function toggleArrow12() {
     const arrow12 = document.getElementById('drop-arrow12');
     arrow12.classList.toggle('rotate');
 }
+
