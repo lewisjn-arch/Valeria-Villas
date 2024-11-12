@@ -3115,12 +3115,12 @@ hr.border-2 {
 .error-form .form-group input[type="search"],
 .error-form .form-group input[type="email"] {
   position: relative;
-  width: 100%;
+  width: 120%;
   line-height: 30px;
-  padding: 20px 60px 20px 30px;
+  padding: 40px 60px 20px 30px;
   height: 70px;
   display: block;
- font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   font-size: 16px;
   background: #323232;
   color: #999;
@@ -3137,7 +3137,7 @@ hr.border-2 {
   color: #323232;
 }
 .error-form .form-group .theme-btn {
-      position: absolute;
+    position: absolute;
     right: 20px;
     top: 10px;
     width: 40px;
