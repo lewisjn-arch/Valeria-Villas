@@ -612,3 +612,86 @@ function toggleArrow12() {
     arrow12.classList.toggle('rotate');
 }
 
+document.getElementById('mortgage-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    const propertyPrice = parseFloat(document.getElementById('property-price').value) || 0;
+    const loanPeriod = parseFloat(document.getElementById('loan-period').value) || 0;
+    const interestRate = parseFloat(document.getElementById('interest-rate').value) || 0;
+    const downPayment = parseFloat(document.getElementById('down-payment').value) || 0;
+
+    const loanAmount = propertyPrice - (propertyPrice * downPayment / 100);
+    const monthlyRate = interestRate / 100 / 12;
+    const numPayments = loanPeriod * 12;
+
+    const monthlyPayment = (loanAmount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -numPayments));
+
+    document.getElementById('monthly-payment').textContent = `KES ${monthlyPayment.toFixed(2)}`;
+});
+
+document.getElementById('toggle-calculator').addEventListener('click', function () {
+    const calculator = document.getElementById('mortgage-calculator');
+    const isHidden = calculator.style.display === 'none';
+
+    // Toggle visibility
+    if (isHidden) {
+        calculator.style.display = 'block';
+    } else {
+        calculator.style.display = 'none';
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-calculator');
+    const calculatorSection = document.getElementById('mortgage-calculator');
+    const closeButton = document.getElementById('close-calculator');
+    const buttonContainer = document.getElementById('calculator-button-container');
+    const arrowContainer = document.querySelector('.arrow-container');
+    const bankSelection = document.getElementById('bank-selection');
+    const interestRateInput = document.getElementById('interest-rate');
+    const loanPeriodInput = document.getElementById('loan-period');
+
+    // Bank data
+    const bankData = {
+        equity: { rate: 14.5, period: 15 },
+        kcb: { rate: 13.0, period: 20 },
+        stanchart: { rate: 12.5, period: 10 },
+        coop: { rate: 14.0, period: 18 },
+    };
+
+    // Show calculator and hide button
+    toggleButton.addEventListener('click', function () {
+        calculatorSection.classList.remove('hide');
+        toggleButton.style.opacity = '0';
+        setTimeout(() => {
+            buttonContainer.style.display = 'none';
+            calculatorSection.classList.add('show');
+            calculatorSection.style.display = 'block';
+            arrowContainer.classList.add('show');
+        }, 300);
+    });
+
+    // Hide calculator and show button
+    closeButton.addEventListener('click', function () {
+        calculatorSection.classList.remove('show');
+        calculatorSection.classList.add('hide');
+        arrowContainer.classList.remove('show');
+        setTimeout(() => {
+            calculatorSection.style.display = 'none';
+            buttonContainer.style.display = 'block';
+            toggleButton.style.opacity = '1';
+        }, 600);
+    });
+
+    // Populate interest rate and loan period when a bank is selected
+    bankSelection.addEventListener('change', function () {
+        const selectedBank = bankSelection.value;
+        if (bankData[selectedBank]) {
+            interestRateInput.value = bankData[selectedBank].rate;
+            loanPeriodInput.value = bankData[selectedBank].period;
+        }
+    });
+});
+
+
+
