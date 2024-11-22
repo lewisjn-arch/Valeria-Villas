@@ -454,27 +454,32 @@ if ($(".accordion-box").length) {
     
 //navigation bar
 document.addEventListener('DOMContentLoaded', function () {
-    const toggler = document.querySelector('.navbar-toggler');
-    const menuItems = document.querySelectorAll('.navbar-nav .nav-link');
+    const toggler = document.querySelector('.navbar-toggler'); // The burger menu button
+    const navbarCollapse = document.querySelector('.navbar-collapse'); // The dropdown menu
+    const menuItems = document.querySelectorAll('.navbar-nav .nav-link'); // The individual menu items
 
+    // Add click event to the burger menu toggler
     toggler.addEventListener('click', function () {
-        this.classList.toggle('collapsed');
+        this.classList.toggle('collapsed'); // Toggle cross and bars animation
     });
 
+    // Add click events to each menu item
     menuItems.forEach(function (item) {
         item.addEventListener('click', function () {
+            // Collapse the menu dropdown
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false,
+            });
+            bsCollapse.hide();
+
+            // Reset the burger menu to 3 bars
             if (toggler.classList.contains('collapsed')) {
                 toggler.classList.remove('collapsed');
-                // Close the menu if it is open
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: false
-                });
-                bsCollapse.hide();
             }
         });
     });
 });
+
 
 
 //video modal
@@ -490,6 +495,11 @@ function closeVideoModal() {
     video.currentTime = 0;
     document.getElementById('videoModal').style.display = 'none';
     document.querySelector('.navbar').classList.remove('navbar-hidden');
+}
+
+function toggleForm() {
+    const form = document.getElementById("contactForm");
+    form.style.display = form.style.display === "none" ? "block" : "none";
 }
 
 function toggleDescription1() {
@@ -691,6 +701,49 @@ document.addEventListener('DOMContentLoaded', function () {
             loanPeriodInput.value = bankData[selectedBank].period;
         }
     });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // List of IDs to target
+    const targetSlides = ["bg-img-home1", "bg-img-home2", "bg-img-home3", "bg-img-home4"];
+
+    const updateBackgroundImages = () => {
+        const screenWidth = window.innerWidth;
+
+        targetSlides.forEach((slideId) => {
+            const slide = document.getElementById(slideId);
+
+            if (slide) {
+                const baseImagePath = slide.getAttribute("data-base-image"); // Base image path
+                let imagePath;
+
+                if (screenWidth <= 600) {
+                    // Mobile image (3:4 aspect ratio)
+                    imagePath = baseImagePath.replace(".jpg", "-mobile.jpg");
+                } else if (screenWidth > 600 && screenWidth <= 1024) {
+                    // Tablet image (4:3 aspect ratio)
+                    imagePath = baseImagePath.replace(".jpg", "-tablet.jpg");
+                } else {
+                    // Desktop image (16:9 aspect ratio)
+                    imagePath = baseImagePath;
+                }
+
+                // Update the data-background attribute and apply background
+                if (imagePath) {
+                    slide.setAttribute("data-background", imagePath);
+                    slide.style.backgroundImage = `url(${imagePath})`;
+                } else {
+                    console.error(`Image path is undefined for slide: ${slideId}`);
+                }
+            } else {
+                console.error(`Slide with ID ${slideId} not found.`);
+            }
+        });
+    };
+
+    // Call the function on page load and resize
+    updateBackgroundImages();
+    window.addEventListener("resize", updateBackgroundImages);
 });
 
 

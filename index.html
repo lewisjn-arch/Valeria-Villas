@@ -64,7 +64,7 @@
     <header id="home" class="header slider-fade" data-scroll-index="0">
         <div class="owl-carousel owl-theme">
             <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-            <div class="text-end item bg-img" data-overlay-dark="5" data-background="img/slider/5.jpg">
+            <div class="text-end item bg-img" id="bg-img-home1" data-overlay-dark="5" data-base-image="img/slider/5.jpg">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-end item bg-img" data-overlay-dark="5" data-background="img/slider/6.jpg">
+            <div class="text-end item bg-img" id="bg-img-home2" data-overlay-dark="5" data-base-image="img/slider/6.jpg">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-end item bg-img" data-overlay-dark="5" data-background="img/slider/7.jpg">
+            <div class="text-end item bg-img" id="bg-img-home3" data-overlay-dark="5" data-base-image="img/slider/7.jpg">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-end item bg-img" data-overlay-dark="5" data-background="img/slider/8.jpg">
+            <div class="text-end item bg-img" id="bg-img-home4" data-overlay-dark="5" data-base-image="img/slider/8.jpg">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
@@ -157,9 +157,9 @@
         </section>
         <!-- About -->
         <section id="about" class="about section-padding" data-scroll-index="1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
+            <div class="about-container">
+                <div class="row about-valeria">
+                    <div class=" mb-30 animate-box about-content" data-animate-effect="fadeInUp">
                         <h2 class="section-title">About <span>VALERIA VILLAS</span></h2>
                         <p>Discover luxury living in our exclusive estate of 37 elegant 4-bedroom mansionettes, each thoughtfully designed with three spacious lounges—including a stunning double-volume formal lounge, a cozy family room, 
                             and a stylish rooftop lounge complete with a pergola.</p>
@@ -167,7 +167,7 @@
                             crafted for those who desire both elegance and functionality.</p>
                         <p>Located just 6 kilometers from Thika superhighway, along the Eastern by-pass, you have access to many recreational, educational and medical facilities within Kamakis area and Ruiru municipality.</p>
                     </div>
-                    <div class="col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class=" animate-box" data-animate-effect="fadeInUp">
                         <div class="about-img">
                             <div class="img"> <img src="img/about.jpg" class="img-fluid" alt=""> </div>
                             <div class="about-img-2 about-buro">Master Plan</div>
@@ -178,7 +178,7 @@
         </section>
         <!-- Projects -->
         <section id="gallery" class="projects section-padding" data-scroll-index="2">
-            <div class="container">
+            <div class="gallery-container">
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="section-title">Our <span>Gallery</span></h2>
@@ -216,7 +216,7 @@
         </section>
         <!-- Services -->
         <section id="services" class="services section-padding" data-scroll-index="3">
-            <div class="container">
+            <div class="services-container">
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="section-title">Community <span>Amenities</span></h2>
@@ -228,9 +228,9 @@
                             <div>
                                 <div class="icon-container">
                                     <img src="img\clients\6.png" alt="">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
-                                            <h5 onclick="toggleDescription4(); toggleArrow4()">Recreational Facilities</h5>
+                                            <h5 onclick="toggleDescription4(); toggleArrow4()">Recreation</h5>
                                             <i id="drop-arrow4"  class="ti-arrow-down"></i>
                                         </button>
                                     </div>
@@ -249,9 +249,9 @@
                             <div>
                                 <div class="icon-container">
                                     <img src="img/icons/icon-1.png" alt="">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
-                                            <h5 onclick="toggleDescription1(); toggleArrow1()">Restaurants & Hotels</h5>
+                                            <h5 onclick="toggleDescription1(); toggleArrow1()">Restaurants</h5>
                                             <i id="drop-arrow1"  class="ti-arrow-down"></i>
                                         </button>
                                     </div>
@@ -270,7 +270,7 @@
                             <div>
                                 <div class="icon-container">
                                     <img src="img/icons/icon-2.png" alt="">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
                                             <h5 onclick="toggleDescription2(); toggleArrow2()">Shopping Malls</h5>
                                             <i id="drop-arrow2"  class="ti-arrow-down"></i>
@@ -290,7 +290,7 @@
                             <div>
                                 <div class="icon-container">
                                     <img style="height:39px; width:50px"  src="img/clients/7.png" alt="">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
                                             <h5 onclick="toggleDescription6(); toggleArrow6()">Accessibility</h5>
                                             <i id="drop-arrow6"  class="ti-arrow-down"></i>
@@ -310,7 +310,7 @@
                             <div>
                                 <div class="icon-container">
                                     <img src="img/clients/1.png" alt="">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
                                             <h5 onclick="toggleDescription5(); toggleArrow5()">Hospitals</h5>
                                             <i id="drop-arrow5"  class="ti-arrow-down"></i>
@@ -330,7 +330,7 @@
                             <div>
                                 <div class="icon-container">
                                     <img src="img/icons/icon-3.png" alt="">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
                                             <h5 onclick="toggleDescription3(); toggleArrow3()">Schools</h5>
                                             <i id="drop-arrow3"  class="ti-arrow-down"></i>
@@ -352,14 +352,14 @@
 
         <!-- Careers -->
         <section id="careers" class="positions section-padding" data-scroll-index="4">
-            <div class="container">
+            <div class="downloads-container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div>
                         <h2 class="section-title">Project <span>Downloads</span></h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 mb-40">
+                    <div class="mb-40">
                         <div class="position">
                             <a class="position-link" href="https://drive.google.com/drive/folders/1juNhoNWhzr_rP251lM1ctJuX8119XC3P?usp=sharing"></a>
                             <div class="position-title">DOWNLOAD PROGRESS REPORT</div>
@@ -398,7 +398,7 @@
                         <h2 class="section-title">Mortgage Calculator</h2>
                         <form id="mortgage-form">
                             <!-- Bank Selection Dropdown -->
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label for="bank-selection">Select Bank</label>
                                 <select id="bank-selection" class="form-control">
                                     <option value="" disabled selected>Select a Bank</option>
@@ -408,32 +408,36 @@
                                     <option value="coop">Co-operative Bank of Kenya</option>
                                 </select>
                             </div>
-                            <!-- Auto-Populated Interest Rate and Loan Period -->
                             <div class="form-group">
-                                <label for="interest-rate">Interest Rate (%)</label>
-                                <input type="number" id="interest-rate" class="form-control" placeholder="Select a bank to auto-fill" readonly>
+                                <label for="property-price">Property Price (KES)</label>
+                                <input type="number" id="property-price" class="col-md-12 form-control" placeholder="Enter property price">
                             </div>
-                            <div class="form-group">
-                                <label for="loan-period">Loan Period (Years)</label>
-                                <input type="number" id="loan-period" class="form-control" placeholder="Select a bank to auto-fill" readonly>
+                            <!-- Auto-Populated Interest Rate and Loan Period -->
+                            <div class="loan-details">
+                                <div class="form-group interest-data">
+                                    <label for="interest-rate">Interest Rate (%)</label>
+                                    <input type="number" id="interest-rate" class="col-md-6 form-control" placeholder="Select a bank to auto-fill" readonly>
+                                </div>
+                                <div class="form-group interest-data">
+                                    <label for="loan-period">Loan Period (Years)</label>
+                                    <input type="number" id="loan-period" class="col-md-6 form-control" placeholder="Select a bank to auto-fill" readonly>
+                                </div>
                             </div>
                             <!-- Additional User Input -->
                             <div class="form-group">
-                                <label for="property-price">Property Price (KES)</label>
-                                <input type="number" id="property-price" class="form-control" placeholder="Enter property price">
-                            </div>
-                            <div class="form-group">
                                 <label for="down-payment">Down Payment (%)</label>
-                                <input type="number" id="down-payment" class="form-control" placeholder="Enter down payment percentage">
+                                <input type="number" id="down-payment" class="col-md-12 form-control" placeholder="Enter down payment percentage">
                             </div>
-                            <button type="submit" id="calculate-btn" class="btn btn-primary">Calculate</button>
+                            <div class="payment-result">
+                                <button type="submit" id="calculate-btn" class="btn btn-primary">Calculate</button>
+                                <div class="col-lg-6">
+                                    <div id="mortgage-result" class="result-box">
+                                        <h4  class="position-title">MONTHLY PAYMENT</h4>
+                                        <p id="monthly-payment"   class="position-title">KES 0.00</p>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
-                    </div>
-                    <div class="col-lg-6">
-                        <div id="mortgage-result" class="result-box">
-                            <h4>Monthly Payment</h4>
-                            <p id="monthly-payment">KES 0.00</p>
-                        </div>
                     </div>
                 </div>
                 <!-- Close Arrow -->
@@ -445,7 +449,7 @@
 
         <!-- Why Valeria Villas -->
         <section id="services" class="services section-padding" data-scroll-index="3">
-            <div class="container">
+            <div class="services-container">
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="section-title">WHY <span>VALERIA VILLAS?</span></h2>
@@ -456,9 +460,9 @@
                         <div class="item">
                             <div>
                                 <div class="icon-container">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
-                                            <h5 onclick="toggleDescription7(); toggleArrow7()">Luxurious Living Spaces</h5>
+                                            <h5 onclick="toggleDescription7(); toggleArrow7()">Luxurious Living</h5>
                                             <i id="drop-arrow7"  class="ti-arrow-down"></i>
                                         </button>
                                     </div>
@@ -476,9 +480,9 @@
                         <div class="item">
                             <div>
                                 <div class="icon-container">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
-                                            <h5 onclick="toggleDescription8(); toggleArrow8()">High-Quality Construction</h5>
+                                            <h5 onclick="toggleDescription8(); toggleArrow8()">High-Quality Build</h5>
                                             <i id="drop-arrow8"  class="ti-arrow-down"></i>
                                         </button>
                                     </div>
@@ -495,7 +499,7 @@
                         <div class="item">
                             <div>
                                 <div class="icon-container">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
                                             <h5 onclick="toggleDescription9(); toggleArrow9()">Prime Location</h5>
                                             <i id="drop-arrow9"  class="ti-arrow-down"></i>
@@ -515,7 +519,7 @@
                         <div class="item">
                             <div>
                                 <div class="icon-container">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
                                             <h5 onclick="toggleDescription10(); toggleArrow10()">Privacy and Security</h5>
                                             <i id="drop-arrow10"  class="ti-arrow-down"></i>
@@ -534,9 +538,9 @@
                         <div class="item">
                             <div>
                                 <div class="icon-container">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
-                                            <h5 onclick="toggleDescription11(); toggleArrow11()">Customization Options</h5>
+                                            <h5 onclick="toggleDescription11(); toggleArrow11()">Unit Customization</h5>
                                             <i id="drop-arrow11"  class="ti-arrow-down"></i>
                                         </button>
                                     </div>
@@ -553,7 +557,7 @@
                         <div class="item">
                             <div>
                                 <div class="icon-container">
-                                    <div style="width: 336px;">
+                                    <div style="width: 100%;">
                                         <button class="drop-button">
                                             <h5 onclick="toggleDescription12(); toggleArrow12()">Detached SQ</h5>
                                             <i id="drop-arrow12"  class="ti-arrow-down"></i>
@@ -768,13 +772,6 @@
     <script src="Js/YouTubePopUp.js"></script>
     <script src="Js/before-after.js"></script>
     <script src="Js/custom.js"></script>
-    <!-------script for the form------>
-    <script>
-        function toggleForm() {
-            const form = document.getElementById("contactForm");
-            form.style.display = form.style.display === "none" ? "block" : "none";
-        }
-    </script>
 </body>
 </html>
 
