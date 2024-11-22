@@ -636,12 +636,6 @@ blockquote cite:before {
     display: none !important;
 }
 
-.lettering-scroll {
-    display: none;
-    color: #B19777;
-    margin: 18px;
-    font-size: 22px;
-}
 
 .nav-scroll .logo-wrapper h2 {
     display: block;
@@ -754,73 +748,7 @@ blockquote cite:before {
 .header .caption .o-hidden {
     display: inline-block;
 }
-.header .caption h2 {
-    font-weight: 400;
-    font-size: 30px;
-}
-.header .caption h4 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #fff;
-    text-align: right;
-    margin-bottom: 30px;
-    -webkit-animation-delay: .2s;
-    animation-delay: .2s;
-}
-.header .caption h1 {
-    position: relative;
-    margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 48px;
-    text-transform: uppercase;
-    line-height: 1.35em;
-    -webkit-animation-delay: .4s;
-    animation-delay: .4s;
-    color: #fff;
-    font-weight: 400;
-    letter-spacing: 15px;
-}
-.header .caption p {
-    font-size: 18px;
-    line-height: 1.75em;
-    margin-bottom: 0;
-    color: #fff;
-    -webkit-animation-delay: .6s;
-    animation-delay: .6s;
-    margin-right: 15px;
-}
-.header .caption p span {
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin: 0 5px;
-    padding-right: 14px;
-    position: relative;
-}
-.header .caption p span:last-child {
-    padding: 0;
-}
-.header .caption p span:last-child:after {
-    display: none;
-}
-.header .caption p span:after {
-    content: '';
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #272727;
-    position: absolute;
-    top: 10px;
-    right: 0;
-    opacity: .5;
-}
-.header .caption .butn-light {
-    -webkit-animation-delay: .8s;
-    animation-delay: .8s;
-    margin-right: 15px;
-}
+
 .header .social a {
     color: #eee;
     font-size: 20px;
@@ -2829,7 +2757,6 @@ hr.border-2 {
 
 .contact-button {
     align-self: center;
-    max-width: 50%;
     padding: 10px 20px;
     margin-bottom: 10%;
     background-color: #c7e70fd2;
@@ -2838,15 +2765,27 @@ hr.border-2 {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.5s ease-in-out;
 }
 
+/* Button Active State */
+.contact-button.active {
+    background-color: #a4c10cd2; /* Darkened color for active state */
+}
+
+/* Form Styling */
 .contact-form-container {
     margin-top: 40px;
+    display: none; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; /* Transition effect for smooth appearance */
 }
 
-.form-container{
-    width: 100%;
+.contact-form-container[style*="display: block"] {
+    opacity: 1; /* Visible state */
 }
+
 
 /* =======  Overlay Effect Bg image style  ======= */
 [data-overlay-dark],
@@ -2975,7 +2914,7 @@ hr.border-2 {
 
 
 /* ======= Laptops and Desktops ======= */
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
     .container {
         max-width: 95% !important;
     }
@@ -2983,11 +2922,62 @@ hr.border-2 {
     .left-panel {
         width: 12.5%;
     }
+
+    .header .caption h1 {
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 48px;
+        text-transform: uppercase;
+        line-height: 1.35em;
+        -webkit-animation-delay: .4s;
+        animation-delay: .4s;
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: 15px;
+    }
+    .header .caption p {
+        line-height: 1.75em;
+        margin-bottom: 0;
+        color: #fff;
+        -webkit-animation-delay: .6s;
+        animation-delay: .6s;
+        margin-right: 15px;
+    }
+    .header .caption p span {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin: 0 5px;
+        padding-right: 14px;
+        position: relative;
+    }
+    .header .caption p span:last-child {
+        padding: 0;
+    }
+    .header .caption p span:last-child:after {
+        display: none;
+    }
+    .header .caption p span:after {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #272727;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        opacity: .5;
+    }
+    .header .caption .butn-light {
+        -webkit-animation-delay: .8s;
+        animation-delay: .8s;
+        margin-right: 15px;
+    }
 }
 
 
 /* ======= Tablets ======= */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 601px) and (max-width: 1200px) {
     .navbar {
         background: #272727;
     }
@@ -3017,12 +3007,6 @@ hr.border-2 {
         display: none !important;
     }
     
-    .lettering-scroll {
-        display: none;
-        color: #B19777;
-        margin: 8px;
-        font-size: 18px;
-    }
     
     .nav-scroll .logo-wrapper h2 {
         display: block;
@@ -3119,6 +3103,22 @@ hr.border-2 {
         display: none;
     }
 
+    .caption-container{
+        margin-right:5%;
+    }
+
+    .capital{
+        font-size: 200%;
+    }
+
+    .caption-line1{
+        font-size: 1.5rem;
+    }
+
+    .caption-line2{
+        font-size: 1.25rem;
+    }
+
     .banner-header {
         height: 30vh;
         margin-top: 70px;
@@ -3152,27 +3152,54 @@ hr.border-2 {
         display: none;
     }
     .header .caption h1 {
-        font-size: 40px;
-    }
-    
-    .hero .intro h3 {
-        font-size: 28px;
-    }
-    .hero .intro h4 {
-        font-size: 20px;
-    }
-    .header .caption h1 {
-        font-size: 30px;
-        margin-bottom: 15px;
-        letter-spacing: 10px;
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 48px;
+        text-transform: uppercase;
         line-height: 1.35em;
+        -webkit-animation-delay: .4s;
+        animation-delay: .4s;
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: 15px;
     }
     .header .caption p {
-        font-size: 15px;
-        margin-right: 10px;
+        line-height: 1.75em;
+        margin-bottom: 0;
+        color: #fff;
+        -webkit-animation-delay: .6s;
+        animation-delay: .6s;
+        margin-right: 15px;
+    }
+    .header .caption p span {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin: 0 5px;
+        padding-right: 14px;
+        position: relative;
+    }
+    .header .caption p span:last-child {
+        padding: 0;
+    }
+    .header .caption p span:last-child:after {
+        display: none;
+    }
+    .header .caption p span:after {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #272727;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        opacity: .5;
     }
     .header .caption .butn-light {
-        margin-right: 10px;
+        -webkit-animation-delay: .8s;
+        animation-delay: .8s;
+        margin-right: 15px;
     }
 
     .portfolio .filtering span {
@@ -3239,7 +3266,7 @@ hr.border-2 {
     #close-calculator-btn,
     #calculate-btn {
         font-size: 1.2em;
-        padding: 0.5% px;
+        padding: 1% 6%;
     }
 
     
@@ -3262,39 +3289,73 @@ hr.border-2 {
         max-height: 4.5em;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        padding: 2.5%;
+        justify-content: space-between;
+        padding:2.5% 0;
+        margin-top: 4%;
     }
+
+    .arrow-container {
+        top: 4.5%;
+        right: 7.5%;
+    }
+    
+    .arrow-up {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact-info{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .contact-container{
+        padding: 0 5%;
+    }
+
+    .leads-collection{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }    
 
     .video-fullscreen-video {
         width: 100%;
-      }
-      .close-button {
-        font-size: 36px;
-        width: 40px;
-        top: 10px;
-        right: 10px;
-      }
-      .video-fullscreen-inner h1 {
-        font-size: 30px;
-        margin-bottom: 15px;
-        letter-spacing: 10px;
-        line-height: 1.35em;
-      }
-      .video-fullscreen-inner p {
-        font-size: 15px;
-        margin-right: 10px;
-      }
+    }
+    .close-button {
+    font-size: 36px;
+    width: 40px;
+    top: 10px;
+    right: 10px;
+    }
+    .video-fullscreen-inner h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    letter-spacing: 10px;
+    line-height: 1.35em;
+    }
+    .video-fullscreen-inner p {
+    font-size: 15px;
+    margin-right: 10px;
+    }
 
-    .bauen-blog .item .con h5,
-    .bauen-blog .item .con h5 a {
-        font-size: 20px;
+    .footer-contacts{
+        display: flex;
+        justify-content: space-between;
     }
-    .bauen-comment-section h3 span {
-        margin-left: 0px;
+
+    .footer-terms{
+        display:flex;
+        justify-content: space-between;
     }
+
+    .text-left {
+        text-align: left;
+    }
+
     .main-footer .sub-footer p.right {
-        text-align: center;
+        text-align: right;
     }
     .main-footer .abot .social-icon {
         text-align: center;
@@ -3309,14 +3370,16 @@ hr.border-2 {
 
 /* ======= Mobile phones ======= */
 @media screen and (max-width: 600px) {
+    .section-title {
+        font-size: 1.8rem;
+        letter-spacing: 10px;
+        word-spacing: 5px;
+        margin-bottom: 30px;
+    }
     .navbar {
         background: #272727;
     }
     
-    .nav-scroll .navbar-nav .logo {
-        padding: 15px 0;
-        color: #fff;
-    }
     .nav-scroll .logo-img {
         width: 60px;
     }
@@ -3327,7 +3390,7 @@ hr.border-2 {
     }
 
     .nav-scroll .logo {
-        width: 125px;
+        width: 135px;
         height: 100%;
     }
 
@@ -3339,16 +3402,9 @@ hr.border-2 {
         letter-spacing: 3px;
         line-height: 1.2em;
         text-transform: uppercase;
-        margin-left: 5px;
         display: none !important;
     }
     
-    .lettering-scroll {
-        display: none;
-        color: #B19777;
-        margin: 8px;
-        font-size: 18px;
-    }
     
     .nav-scroll .logo-wrapper h2 {
         display: block;
@@ -3356,13 +3412,13 @@ hr.border-2 {
     
     .nav-scroll .logo-wrapper {
         height: 65px;
-        padding: 0 5% 0 2%;
+        padding: 1.5% 5% 1% 2%;
         background: #272727;
     }
     
     .logo-wrapper {
         background: #272727;
-        padding-left: 10px;
+        padding: 1% 0 1% 2%;
     }
     .logo-wrapper .logo span {
         display: block;
@@ -3375,13 +3431,13 @@ hr.border-2 {
         text-transform: uppercase;
     }
     .logo {
-        padding: 0;
-        width: 55px;
+        width: 72px;
         text-align: center;
     }
     .logo-img {
+        width:  72px;
         display: block;
-        width: 55px;
+        height: 72px;
     }
 
     .navbar button {
@@ -3432,6 +3488,80 @@ hr.border-2 {
         right: auto;
         left: 0;
     }
+
+    .caption-container{
+        margin-right:2.5%;
+    }
+
+    .capital{
+        font-size: 200%;
+    }
+
+    .caption-line1{
+        font-size: 1.2rem;
+    }
+
+    .caption-line2{
+        font-size: 1rem;
+    }
+
+    .hero-corner,
+    .hero-corner2,
+    .hero-corner3,
+    .hero-corner4 {
+        display: none;
+    }
+
+    .header .caption h1 {
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 1.35em;
+        -webkit-animation-delay: .4s;
+        animation-delay: .4s;
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: 0.5rem;
+    }
+    .header .caption p {
+        line-height: 1.75em;
+        margin-bottom: 0;
+        color: #fff;
+        -webkit-animation-delay: .6s;
+        animation-delay: .6s;
+        margin-right: 15px;
+    }
+    .header .caption p span {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin: 0 5px;
+        padding-right: 14px;
+        position: relative;
+    }
+    .header .caption p span:last-child {
+        padding: 0;
+    }
+    .header .caption p span:last-child:after {
+        display: none;
+    }
+    .header .caption p span:after {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #272727;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        opacity: .5;
+    }
+    .header .caption .butn-light {
+        -webkit-animation-delay: .8s;
+        animation-delay: .8s;
+        margin-right: 15px;
+    }
     
     .owl-nav {
         display: none;
@@ -3439,6 +3569,32 @@ hr.border-2 {
     
     .left-panel {
         display: none;
+    }
+
+    .about-container{
+        padding: 4% 7.5%;
+    }
+
+    .about-valeria{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .gallery-container{
+        padding: 0 7.5%;
+    }
+
+    .downloads-container{
+        padding: 0 7.5%;
+    }
+
+     .services-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+        padding:10% 7.5%;
+        margin: auto;
     }
 
     .services .item{
@@ -3480,6 +3636,57 @@ hr.border-2 {
     }
     .position-icon {
         display: none
+    }
+
+    .mortgage-calculator {
+        padding: 0 7.5%;
+    }
+    .mortgage-calculator h2 {
+        font-size: 32px;
+    }
+    #toggle-calculator,
+    #close-calculator-btn,
+    #calculate-btn {
+        font-size: 1.2em;
+        padding:2.5 6% ;
+    }
+
+    
+    .loan-details{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #loan-period #interest-rate{
+        width:150%;
+    }
+
+    .interest-data{
+        width: 45%;
+    }
+
+    .payment-result{
+        max-height: 4.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5% 0;
+    }
+
+    .arrow-container {
+        top: 8%;
+        right: 7.5%;
+    }
+    
+    .arrow-up {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact-container{
+        padding: 0 7.5%;
     }
 
     .section-head h4 {
