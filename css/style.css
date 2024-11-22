@@ -2992,10 +2992,6 @@ hr.border-2 {
         background: #272727;
     }
     
-    .nav-scroll .navbar-nav .logo {
-        padding: 15px 0;
-        color: #fff;
-    }
     .nav-scroll .logo-img {
         width: 60px;
     }
@@ -3006,7 +3002,7 @@ hr.border-2 {
     }
 
     .nav-scroll .logo {
-        width: 125px;
+        width: 135px;
         height: 100%;
     }
 
@@ -3018,7 +3014,6 @@ hr.border-2 {
         letter-spacing: 3px;
         line-height: 1.2em;
         text-transform: uppercase;
-        margin-left: 5px;
         display: none !important;
     }
     
@@ -3035,13 +3030,13 @@ hr.border-2 {
     
     .nav-scroll .logo-wrapper {
         height: 65px;
-        padding: 0 5% 0 2%;
+        padding: 1.5% 5% 1% 2%;
         background: #272727;
     }
     
     .logo-wrapper {
         background: #272727;
-        padding-left: 10px;
+        padding: 1% 0 1% 2%;
     }
     .logo-wrapper .logo span {
         display: block;
@@ -3054,13 +3049,13 @@ hr.border-2 {
         text-transform: uppercase;
     }
     .logo {
-        padding: 0;
-        width: 55px;
+        width: 72px;
         text-align: center;
     }
     .logo-img {
+        width:  72px;
         display: block;
-        width: 55px;
+        height: 72px;
     }
 
     .navbar button {
