@@ -1283,9 +1283,6 @@ blockquote cite:before {
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
-    width: 25%;
-    height: 100%;
-    padding: 2% 4%;
     border: 1px solid transparent; /* Set transparent border to maintain consistent size */
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
@@ -1983,7 +1980,7 @@ hr.border-2 {
 
 /* ======= Footer style ======= */
 .main-footer {
-    padding: 5% 0 0;
+    padding: 2% 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     position: initial;
 }
@@ -2659,6 +2656,11 @@ hr.border-2 {
 
 /* ======= Laptops and Desktops ======= */
 @media (min-width: 1200px) {
+    
+
+    .section-title {
+        text-align: center;
+    }
     .navbar {
         top: 3.5%;
     }
@@ -2977,6 +2979,16 @@ hr.border-2 {
     .downloads-container{
         padding: 0 7.5%;
     }
+    #close-calculator-btn,
+    #calculate-btn { 
+        width: 25%;
+        height: 100%;
+        padding: 1% 2%;
+    }
+
+    #toggle-calculator{
+        padding: 1% 2%;
+    }
 
     .mortgage-calculator {
         padding: 50px 25px;
@@ -3035,7 +3047,7 @@ hr.border-2 {
     .contact-container{
         display: flex;
         flex-direction: column;
-        padding: 0 7.5%; 
+        padding: 0 20%; 
     }
 
     .leads-collection{
@@ -3048,7 +3060,6 @@ hr.border-2 {
     .contact-button {
         align-self: center;
         padding: 10px 20px;
-        margin: auto;
     }
 
     .form-group .message-button{
@@ -3061,11 +3072,31 @@ hr.border-2 {
         display: flex;
         justify-content: space-between;
     }
+
+    .main-footer .sub-footer p.right {
+        text-align: right;
+    }
+
+    .abot{
+        margin: auto;
+    }
+
+    .footer-terms{
+        display:flex;
+        justify-content: space-between;
+        padding:0% 10%;
+    }
+
+    .footer-contacts{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 
 /* ======= Tablets ======= */
 @media screen and (min-width: 601px) and (max-width: 1200px) {
+
     .navbar {
         background: #272727;
     }
