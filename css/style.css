@@ -1283,7 +1283,9 @@ blockquote cite:before {
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
-    padding: 1% 2%;
+    width: 25%;
+    height: 100%;
+    padding: 2% 4%;
     border: 1px solid transparent; /* Set transparent border to maintain consistent size */
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
@@ -3007,7 +3009,7 @@ hr.border-2 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding:2.5% 0;
+        padding:1% 0;
         margin-top: 4%;
     }
 
@@ -3346,8 +3348,10 @@ hr.border-2 {
     #toggle-calculator,
     #close-calculator-btn,
     #calculate-btn {
+        width: 40%;
+        height: 100%;
+        padding: 2% 4%;
         font-size: 1.2em;
-        padding: 1% 6%;
     }
 
     
@@ -3744,7 +3748,9 @@ hr.border-2 {
     #close-calculator-btn,
     #calculate-btn {
         font-size: 1.2em;
-        padding:2.5 6% ;
+        width: 40%;
+        height: 100%;
+        padding: 2% 4%;
     }
 
     .loan-details{
