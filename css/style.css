@@ -2492,11 +2492,6 @@ hr.border-2 {
     outline: none;
 }
 
-.contact-container{
-    display: flex;
-    flex-direction: column;
-}
-
 .contact-info{
     display:flex;
     justify-content: space-between;
@@ -2508,7 +2503,7 @@ hr.border-2 {
     margin-bottom: 10%;
     background-color: #c7e70fd2;
     color: white;
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
@@ -3035,11 +3030,28 @@ hr.border-2 {
         justify-content: space-between;
     }
 
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0 7.5%; 
+    }
+
     .leads-collection{
         width: 50%;
         display: flex;
         flex-direction: column;
 
+    }
+
+    .contact-button {
+        align-self: center;
+        padding: 10px 20px;
+        margin: auto;
+    }
+
+    .action-call{
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -3772,9 +3784,28 @@ hr.border-2 {
         padding: 0 7.5%;
     }
 
+    .contact-button {
+        align-self: center;
+        padding: 10px 20px;
+        margin-bottom: 2em;
+    }
+
+    .leads-collection{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     .section-head h4 {
         font-size: 30px;
     }
+
+    .main-footer {
+        padding: 5% 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        position: initial;
+    }
+
     .footer {
         padding: 60px 0;
     }
@@ -3792,5 +3823,19 @@ hr.border-2 {
         display:flex;
         justify-content: space-between;
         padding:0% 10%;
+    }
+
+    .main-footer .sub-footer {
+        padding: 1.5em 0 0.8em 0;
+        margin-top: 1em;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        position: relative;
+    }
+
+    .main-footer .sub-footer p a:hover {
+        color: #b19777;
+    }
+    .main-footer .sub-footer p.right {
+        text-align: right;
     }
 }
