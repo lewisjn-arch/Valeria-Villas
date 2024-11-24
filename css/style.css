@@ -1178,6 +1178,10 @@ blockquote cite:before {
     margin-bottom: 20px;
 }
 
+.ti-arrow-down {
+    color: #b19777;
+}
+
 .drop-button{
     background:none;
     width:100%;
@@ -1231,6 +1235,7 @@ blockquote cite:before {
 }
 
 .icon-container{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
