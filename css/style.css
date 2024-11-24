@@ -3339,13 +3339,17 @@ hr.border-2 {
         display:flex;
     }
 
+    .calculator-window{
+        margin: auto;
+    }
+
     .mortgage-calculator {
         padding: 0 7.5%;
     }
     .mortgage-calculator h2 {
         font-size: 32px;
     }
-    #toggle-calculator,
+
     #close-calculator-btn,
     #calculate-btn {
         width: 40%;
@@ -3354,6 +3358,9 @@ hr.border-2 {
         font-size: 1.2em;
     }
 
+    #toggle-calculator{
+        width: 22.5%;
+    }
     
     .loan-details{
         width: 100%;
@@ -3744,13 +3751,17 @@ hr.border-2 {
     .mortgage-calculator h2 {
         font-size: 32px;
     }
-    #toggle-calculator,
+    
     #close-calculator-btn,
     #calculate-btn {
         font-size: 1.2em;
         width: 40%;
         height: 100%;
         padding: 2% 4%;
+    }
+
+    #toggle-calculator{
+        width: 50%;
     }
 
     .loan-details{
