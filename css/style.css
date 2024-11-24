@@ -662,7 +662,6 @@ blockquote cite:before {
 .logo-wrapper {
     float: left;
     background: #272727;
-    padding: 5px 5px;
 }
 .logo-wrapper .logo h2 {
     font-family: 'Oswald', sans-serif;
@@ -692,11 +691,6 @@ blockquote cite:before {
     text-transform: uppercase;
 }
 
-.logo {
-    padding: 0;
-    width: 133px;
-    text-align: center;
-}
 .logo-img {
     width: 100px;
 }
@@ -999,6 +993,7 @@ blockquote cite:before {
     position: relative;
 }
 .about .about-img .img {
+    width: 100%;
     padding: 4% 2% 4% 4%;
     position: relative;
 }
@@ -2774,10 +2769,10 @@ hr.border-2 {
     
     .nav-scroll .logo-scroll {
         display: block;
-        width: 75px;
+        width: 150px;
     }
     .nav-scroll .logo {
-        width: 75px;
+        width: 150px;
     }
     .nav-scroll .logo-img {
         margin-bottom: 0px;
@@ -2812,14 +2807,15 @@ hr.border-2 {
     }
     
     .nav-scroll .logo-wrapper {
-        padding: 15px 5% 15px 30px;
+        padding: 0.5% 2.5% 0.5% 1%;
         background: #272727;
     }
     
     .logo-wrapper {
         float: left;
         background: #272727;
-        padding: 5px 5px;
+        padding-left: 0.5%;
+        width: 7.5%;
     }
     .logo-wrapper .logo h2 {
         font-family: 'Oswald', sans-serif;
@@ -2851,11 +2847,13 @@ hr.border-2 {
     
     .logo {
         padding: 0;
-        width: 133px;
+        width: 100%;
+        height: 100%;
         text-align: center;
     }
     .logo-img {
-        width: 100px;
+        width: 100%;
+        height: 100%;
     }
     
     .dropdown .nav-link i {
