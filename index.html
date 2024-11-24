@@ -589,10 +589,10 @@
                         <p>Reach out to us to book and plan a site visit at your convenience and end up booking a unit to enjoy elevated living in this community!</p>
                     </div>
                     <div class="leads-collection animate-box" data-animate-effect="fadeInUp">
-                        <button id="contactButton" onclick="toggleForm()" class="contact-button">Write to Us</button>
+                        <button id="contactButton" onclick="toggleForm()" class="contact-button">Get in Touch</button>
                         <!-- Contact Form and Div Content -->
                         <div id="contactForm" class=" animate-box contact-form-container" style="display: none;" data-animate-effect="fadeInUp">
-                            <form method="post" class="contact__form" action="mail.php">
+                            <form method="post" class="contact__form" action="https://formspree.io/f/xwkjdnzq">
                                 <!-- Form message ----------------->
                                 <div class="row">
                                     <div class="col-12">
@@ -603,7 +603,7 @@
                                 </div>
                                 <div class="row form-container">
                                     <div class="form-group">
-                                        <input name="name" type="text" placeholder="Your Name *" required>
+                                        <input name="name" type="text" placeholder="Your Name *"  minlength="4" maxlength="30" required>
                                     </div>
                                     <div class="form-group">
                                         <input name="email" type="email" placeholder="Your Email *" required>
@@ -615,10 +615,10 @@
                                         <input name="subject" type="text" placeholder="Subject *" required>
                                     </div>
                                     <div class="form-group">
-                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required></textarea>
+                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required maxlength="500"></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <input name="submit" type="submit" value="Send Message">
+                                    <div class="form-group message-button">
+                                        <input class="message-button" name="submit" type="submit" value="Send Message">
                                     </div>
                                 </div>
                             </form>
@@ -698,9 +698,10 @@
                     <div class="col-md-4 mb-30">
                         <div class="item fotcont">
                             <div class="fothead">
-                                <h6>Email:</h6>
+                                <h6>Emails:</h6>
                             </div>
-                            <p>valeriavillasruiru@gmail.com</p>
+                            <p>info@valeriavillas.com</p>
+                            <p>sales@valeriavillas.com</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-30">

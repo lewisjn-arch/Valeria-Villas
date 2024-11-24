@@ -1983,7 +1983,7 @@ hr.border-2 {
 
 /* ======= Footer style ======= */
 .main-footer {
-    padding: 60px 0 0;
+    padding: 5% 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     position: initial;
 }
@@ -2502,7 +2502,7 @@ hr.border-2 {
 .contact-button {
     align-self: center;
     padding: 10px 20px;
-    margin-bottom: 10%;
+    margin-bottom: 2.5%;
     background-color: #c7e70fd2;
     color: white;
     border: 1px solid transparent;
@@ -3051,6 +3051,12 @@ hr.border-2 {
         margin: auto;
     }
 
+    .form-group .message-button{
+        display: flex;
+        justify-self: center;
+        margin-bottom: 2.5%;
+    }
+
     .action-call{
         display: flex;
         justify-content: space-between;
@@ -3359,7 +3365,7 @@ hr.border-2 {
     }
 
     #toggle-calculator{
-        width: 22.5%;
+        width: 30%;
     }
     
     .loan-details{
@@ -3417,6 +3423,17 @@ hr.border-2 {
         flex-direction: column;
     }
 
+    .form-container{
+        width: 60%;
+        margin: auto;
+    }
+
+    .form-group .message-button{
+        display: flex;
+        justify-self: center;
+        margin-bottom: 2.5%;
+    }
+
     .video-fullscreen-video {
         width: 100%;
     }
@@ -3464,6 +3481,14 @@ hr.border-2 {
         width: auto;
         margin: 0px 0;
     }
+
+    .main-footer .sub-footer {
+        padding: 1em 0 0.8em 0;
+        margin-top: 1em;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        position: relative;
+    }
+
 }
 
 /* ======= Mobile phones ======= */
@@ -3803,14 +3828,25 @@ hr.border-2 {
 
     .contact-button {
         align-self: center;
-        padding: 10px 20px;
-        margin-bottom: 2em;
+        padding: 2% 6%;
+        margin-bottom: 2.5%;
     }
 
     .leads-collection{
         width: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    .form-container{
+        width: 90%;
+        margin: auto;
+    }
+
+    .form-group .message-button{
+        display: flex;
+        justify-self: center;
+        margin-bottom: 2.5%;
     }
 
     .section-head h4 {
@@ -3826,6 +3862,7 @@ hr.border-2 {
     .footer {
         padding: 60px 0;
     }
+    
     .text-left {
         text-align: center;
     }
