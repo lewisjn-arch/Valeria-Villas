@@ -1351,40 +1351,6 @@ blockquote cite:before {
     box-sizing: border-box;
 }
 
-/* Responsive Media Queries */
-
-/* Phones (<=600px) */
-@media (max-width: 600px) {
-    .mortgage-calculator {
-        padding: 20px 10px;
-    }
-    .mortgage-calculator h2 {
-        font-size: 24px;
-    }
-    .arrow-container {
-        top: -15px;
-        right: 10px;
-    }
-    #toggle-calculator,
-    #close-calculator-btn,
-    #calculate-btn {
-        font-size: 14px;
-        padding: 8px 20px;
-    }
-}
-
-
-/* Large Screens (<=1200px) */
-@media (max-width: 1200px) {
-    .mortgage-calculator {
-        padding: 50px 25px;
-    }
-    .mortgage-calculator h2 {
-        font-size: 36px;
-    }
-}
-
-
 
 /* ======= Projects style ======= */
 .projects .item {
@@ -3015,6 +2981,46 @@ hr.border-2 {
         padding: 0 7.5%;
     }
 
+    .mortgage-calculator {
+        padding: 50px 25px;
+    }
+    .mortgage-calculator h2 {
+        font-size: 36px;
+    }
+
+    .calculator-window{
+        margin: auto;
+    }
+
+    .loan-details{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #loan-period #interest-rate{
+        width:150%;
+    }
+
+    .interest-data{
+        width: 45%;
+    }
+
+    .payment-result{
+        max-height: 4.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:2.5% 0;
+        margin-top: 4%;
+    }
+
+    .arrow-up {
+        width: 20px;
+        height: 20px;
+    }
+
      .services-container{
         display: flex;
         flex-direction: column;
@@ -3416,6 +3422,7 @@ hr.border-2 {
     .footer-terms{
         display:flex;
         justify-content: space-between;
+        padding:0% 10%;
     }
 
     .text-left {
@@ -3728,7 +3735,6 @@ hr.border-2 {
         padding:2.5 6% ;
     }
 
-    
     .loan-details{
         width: 100%;
         display: flex;
@@ -3780,5 +3786,11 @@ hr.border-2 {
     }
     .text-right {
         text-align: center;
+    }
+
+    .footer-terms{
+        display:flex;
+        justify-content: space-between;
+        padding:0% 10%;
     }
 }
