@@ -746,6 +746,52 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", updateBackgroundImages);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const contactButton = document.getElementById("contact-button");
+    const contactTitle = document.getElementById("contact-title");
+    const contactForm = document.getElementById("contact-form");
+
+    let formVisible = false;
+
+    // Toggle form visibility and move elements
+    contactButton.addEventListener("click", () => {
+        formVisible = !formVisible;
+        if (formVisible) {
+            contactButton.classList.add("moved");
+            contactTitle.classList.add("moved");
+            contactForm.classList.add("visible");
+            contactButton.textContent = "Close Form";
+        } else {
+            contactButton.classList.remove("moved");
+            contactTitle.classList.remove("moved");
+            contactForm.classList.remove("visible");
+            contactButton.textContent = "Get in Touch";
+        }
+    });
+
+    // Handle form submission
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+
+        // Reset the form after a short delay
+        setTimeout(() => {
+            contactForm.reset(); // Clear form inputs
+            formVisible = false;
+            contactButton.classList.remove("moved");
+            contactTitle.classList.remove("moved");
+            contactForm.classList.remove("visible");
+            contactButton.textContent = "Get in Touch";
+
+            // Remove the success message after hiding the form
+            if (contactForm.contains(successMessage)) {
+                contactForm.removeChild(successMessage);
+            }
+        }, 2000); // Delay for 2 seconds to show the success message
+    });
+});
+
+
 
 
 

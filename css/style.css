@@ -2673,7 +2673,7 @@ hr.border-2 {
 
 /* ======= Laptops and Desktops ======= */
 @media (min-width: 1200px) {
-    
+
     .section-title {
         text-align: center;
     }
@@ -3077,10 +3077,50 @@ hr.border-2 {
 
     }
 
+    .catch-phrase{
+        width: 50%;
+    }
+
     .contact-button {
         align-self: center;
         padding: 10px 20px;
     }
+
+    /* Contact Section Animations */
+    #contact-title {
+        transition: transform 0.8s ease, opacity 0.8s ease;
+    }
+    #contact-title.moved {
+        transform: translateX(-34%);
+        opacity: 1;
+    }
+
+    #contact-button {
+        transition: transform 0.8s ease, opacity 0.8s ease;
+    }
+    #contact-button.moved {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    #contact-form {
+        transition: transform 0.8s ease, opacity 0.8s ease;
+        transform: translateX(-100%);
+        opacity: 0;
+        display: none;
+    }
+    #contact-form.visible {
+        transform: translateX(0);
+        opacity: 1;
+        display: block;
+    }
+
+    .hidden-form {
+        transform: translateX(-100%);
+        opacity: 0;
+        display: none;
+    }
+
 
     .form-group .message-button{
         display: flex;
@@ -3108,6 +3148,7 @@ hr.border-2 {
     }
 
     .footer-contacts{
+        padding: 0 15%;
         display: flex;
         justify-content: space-between;
     }
@@ -3375,7 +3416,7 @@ hr.border-2 {
         padding: 0 7.5%;
     }
 
-     .services-container{
+    .services-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -3463,13 +3504,58 @@ hr.border-2 {
     }
 
     .contact-container{
-        padding: 0 7.5%;
+        padding: 0 15%;
+    }
+
+    .catch-phrase{
+        width: 50%;
     }
 
     .main-contact{
         display:flex;
         padding:0 7.5%;
         justify-content: space-between;
+    }
+
+    .contact-button {
+        position: absolute;
+        align-self: center;
+        padding: 10px 20px;
+    }
+
+    /* Contact Section Animations */
+    #contact-title {
+        transition: transform 0.8s ease, opacity 0.8s ease;
+    }
+    #contact-title.moved {
+        transform: translateX(-27%);
+        opacity: 1;
+    }
+
+    #contact-button {
+        transition: transform 0.8s ease, opacity 0.8s ease;
+    }
+    #contact-button.moved {
+        transform: translateX(-80%);
+        opacity: 1;
+    }
+
+    #contact-form {
+        transition: transform 0.8s ease, opacity 0.8s ease;
+        transform: translateX(-100%);
+        opacity: 0;
+        display: none;
+    }
+    #contact-form.visible {
+        transform: translateX(0);
+        opacity: 1;
+        display: block;
+    }
+
+    .hidden-form {
+        transform: translateX(-100%);
+        opacity: 0;
+        display: none;
     }
 
     .leads-collection{
@@ -3479,8 +3565,8 @@ hr.border-2 {
     }
 
     .form-container{
-        width: 60%;
-        margin: auto;
+        width: 100%;
+        margin: 2em auto;
     }
 
     .form-group .message-button{
