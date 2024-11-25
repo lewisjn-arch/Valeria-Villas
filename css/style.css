@@ -2517,19 +2517,37 @@ hr.border-2 {
     align-self: center;
     padding: 10px 20px;
     margin-bottom: 2.5%;
-    background-color: #c7e70fd2;
+    background-color: #b19777;
     color: white;
     border: 1px solid transparent;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
     position: relative;
-    transition: background-color 0.3s ease, transform 0.5s ease-in-out;
+    transition: background-color white 0.3s ease, transform 0.5s ease-in-out;
 }
 
-/* Button Active State */
-.contact-button.active {
-    background-color: #a4c10cd2; /* Darkened color for active state */
+.contact-button:hover{
+    background-color: white;
+    color: #333; 
+}
+
+#message-button{
+    border-radius: 10px;
+}
+
+#message-button:hover{
+    background-color: white;
+    color: #333; 
+}
+
+#contact-button, #message-button, #calculate-btn {
+    transition: background-color 0.3s ease;
+}
+
+#contact-button.clicked, #message-button.clicked, #calculate-btn.clicked {
+    background-color: white;
+    color: #333; /* Ensure text remains visible on white background */
 }
 
 /* Form Styling */
@@ -3392,7 +3410,7 @@ hr.border-2 {
     }
 
     .about-container{
-        padding: 4% 7.5%;
+        padding: 4% 15%;
     }
 
     .about-valeria{
@@ -3409,11 +3427,11 @@ hr.border-2 {
     }
 
     .gallery-container{
-        padding: 0 7.5%;
+        padding: 0 15%;
     }
 
     .downloads-container{
-        padding: 0 7.5%;
+        padding: 0 15%;
     }
 
     .services-container{
@@ -3421,7 +3439,7 @@ hr.border-2 {
         flex-direction: column;
         justify-content: center;
         width:100%;
-        padding:4% 7.5% 0 7.5%;
+        padding:4% 15% 0 15%;
         margin: auto;
     }
 
@@ -3528,7 +3546,7 @@ hr.border-2 {
         transition: transform 0.8s ease, opacity 0.8s ease;
     }
     #contact-title.moved {
-        transform: translateX(-27%);
+        transform: translateX(-25%);
         opacity: 1;
     }
 
@@ -3536,7 +3554,7 @@ hr.border-2 {
         transition: transform 0.8s ease, opacity 0.8s ease;
     }
     #contact-button.moved {
-        transform: translateX(-80%);
+        transform: translateX(-65%);
         opacity: 1;
     }
 

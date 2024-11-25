@@ -791,6 +791,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".contact-button, .message-button, .calculate-btn");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            button.classList.add("clicked");
+
+            // Remove the clicked class after 0.5s to revert to the original state
+            setTimeout(() => {
+                button.classList.remove("clicked");
+            }, 500);
+        });
+    });
+});
+
+
 
 
 
