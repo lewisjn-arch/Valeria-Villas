@@ -747,6 +747,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Contact form elements
     const contactButton = document.getElementById("contact-button");
     const contactTitle = document.getElementById("contact-title");
     const contactForm = document.getElementById("contact-form");
@@ -773,7 +774,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contactForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
-
         // Reset the form after a short delay
         setTimeout(() => {
             contactForm.reset(); // Clear form inputs
@@ -782,29 +782,35 @@ document.addEventListener("DOMContentLoaded", () => {
             contactTitle.classList.remove("moved");
             contactForm.classList.remove("visible");
             contactButton.textContent = "Get in Touch";
-
-            // Remove the success message after hiding the form
-            if (contactForm.contains(successMessage)) {
-                contactForm.removeChild(successMessage);
-            }
-        }, 2000); // Delay for 2 seconds to show the success message
+        }, 500); // Delay for 2 seconds
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+    // Button click/touch styling logic
     const buttons = document.querySelectorAll(".contact-button, .message-button, .calculate-btn");
 
     buttons.forEach(button => {
+        // Add event listener for click (desktop)
         button.addEventListener("click", () => {
             button.classList.add("clicked");
 
             // Remove the clicked class after 0.5s to revert to the original state
             setTimeout(() => {
                 button.classList.remove("clicked");
-            }, 500);
+            },200);
+        });
+
+        // Add event listener for touchend (mobile/touch devices)
+        button.addEventListener("touchend", () => {
+            button.classList.add("clicked");
+
+            // Remove the clicked class after 0.5s to revert to the original state
+            setTimeout(() => {
+                button.classList.remove("clicked");
+            }, 200);
         });
     });
 });
+
 
 
 
