@@ -782,7 +782,7 @@ document.addEventListener("DOMContentLoaded", () => {
             contactTitle.classList.remove("moved");
             contactForm.classList.remove("visible");
             contactButton.textContent = "Get in Touch";
-        }, 500); // Delay for 2 seconds
+        }, 500); // Delay for 0.5 seconds
     });
 
     // Button click/touch styling logic
@@ -793,7 +793,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", () => {
             button.classList.add("clicked");
 
-            // Remove the clicked class after 0.5s to revert to the original state
+            // Remove the clicked class after 0.2s to revert to the original state
             setTimeout(() => {
                 button.classList.remove("clicked");
             },200);
@@ -803,7 +803,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("touchend", () => {
             button.classList.add("clicked");
 
-            // Remove the clicked class after 0.5s to revert to the original state
+            // Remove the clicked class after 0.2s to revert to the original state
             setTimeout(() => {
                 button.classList.remove("clicked");
             }, 200);
