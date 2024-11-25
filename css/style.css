@@ -2679,8 +2679,9 @@ hr.border-2 {
     }
 
     #contact-title {
-        text-align: left;
+        text-align: center;
     }
+
     .navbar {
         top: 3.5%;
     }
@@ -3115,6 +3116,10 @@ hr.border-2 {
 
 /* ======= Tablets ======= */
 @media screen and (min-width: 601px) and (max-width: 1200px) {
+
+    #contact-title {
+        text-align: center;
+    }
 
     .navbar {
         background: #272727;
