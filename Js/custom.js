@@ -776,8 +776,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Reset the form after a short delay
         setTimeout(() => {
-            contactForm.reset(); // Clear form inputs
-            formVisible = false;
+            contactForm.reset(); // Clear form input          
             contactButton.classList.remove("moved");
             contactTitle.classList.remove("moved");
             contactForm.classList.remove("visible");
@@ -793,23 +792,25 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", () => {
             button.classList.add("clicked");
 
-            // Remove the clicked class after 0.2s to revert to the original state
+            // Remove the clicked class after 0.5s to revert to the original state
             setTimeout(() => {
                 button.classList.remove("clicked");
-            },200);
+            },500);
         });
 
         // Add event listener for touchend (mobile/touch devices)
         button.addEventListener("touchend", () => {
             button.classList.add("clicked");
 
-            // Remove the clicked class after 0.2s to revert to the original state
+            // Remove the clicked class after 0.5s to revert to the original state
             setTimeout(() => {
                 button.classList.remove("clicked");
-            }, 200);
+            }, 500);
         });
     });
 });
+
+
 
 
 
