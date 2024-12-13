@@ -1133,7 +1133,7 @@ blockquote cite:before {
 }
 .position-time span {
     font-family: 'Didact Gothic', sans-serif;
-    color: #fff;
+    color: #E6A250;
     display: block;
     text-transform: none;
     letter-spacing: 0px;
@@ -1247,6 +1247,20 @@ blockquote cite:before {
     transition-property: all;
     transition-duration: 0.8s;
     transition-timing-function: ease-in-out;
+}
+
+.catch-line{
+    color:#fdfdfd;
+    text-align: center;
+    align-self: center;
+}
+
+.amenities-link{
+    color:#E6A250
+}
+
+.amenities-link:hover{
+    color:#fff
 }
 
 .icon-container{
@@ -3576,6 +3590,11 @@ hr.border-2 {
         border: 2.5px solid #fff;
     }
 
+    .about-img .about-img-2 {
+        width: 50% !important;
+        padding: 1% 1%;
+    }
+
     .portfolio .filtering span {
         margin-bottom: 10px;
     }
@@ -3847,7 +3866,7 @@ hr.border-2 {
     .section-title {
         text-align: center;
         font-size: 1.8rem;
-        letter-spacing: 10px;
+        letter-spacing: 5px;
         word-spacing: 5px;
         margin-bottom: 20px;
     }
@@ -4117,7 +4136,7 @@ hr.border-2 {
     }
 
     .about-img .about-img-2 {
-        padding: 1% 1%;
+        padding: 1% 2%;
     }
     
     .about-buro {
