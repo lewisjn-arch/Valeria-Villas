@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.valeriavillas.com/</loc>
+  <lastmod>2025-03-05T16:11:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.valeriavillas.com/index.html</loc>
+  <lastmod>2025-03-05T16:11:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.valeriavillas.com/blog.html</loc>
+  <lastmod>2025-03-05T16:10:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.valeriavillas.com/phase1.html</loc>
+  <lastmod>2025-03-05T16:11:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.valeriavillas.com/phase2.html</loc>
+  <lastmod>2025-03-05T16:11:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
