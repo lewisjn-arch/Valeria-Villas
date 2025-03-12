@@ -2552,6 +2552,11 @@ hr.border-2 {
     justify-content: space-between;
 }
 
+.button-container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .contact-button {
     align-self: left;
     padding: 10px 20px;
@@ -2567,6 +2572,23 @@ hr.border-2 {
 }
 
 .contact-button:hover{
+    background-color: white;
+    color: #333; 
+}
+
+.booking-button {
+    align-self: right;
+    background-color: #01674E;
+    color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color white 0.3s ease, transform 0.5s ease-in-out;
+}
+
+.booking-button:hover{
     background-color: white;
     color: #333; 
 }
@@ -2588,25 +2610,6 @@ hr.border-2 {
 #contact-button.clicked, #message-button.clicked, #calculate-btn.clicked {
     background-color: white;
     color: #333; /* Ensure text remains visible on white background */
-}
-
-.booking-button {
-    align-self: right;
-    padding: 10px 20px;
-    margin-bottom: 2.5%;
-    background-color: #01674E;
-    color: white;
-    border: 1px solid transparent;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    position: relative;
-    transition: background-color white 0.3s ease, transform 0.5s ease-in-out;
-}
-
-.booking-button:hover{
-    background-color: white;
-    color: #333; 
 }
 
 #booking-button, #message-button, #calculate-btn {
@@ -3204,7 +3207,7 @@ hr.border-2 {
     .contact-container{
         display: flex;
         flex-direction: column;
-        padding: 0 20%; 
+        padding: 0 15%; 
     }
 
     .leads-collection{
@@ -3218,13 +3221,14 @@ hr.border-2 {
         width: 50%;
     }
 
-    .contact-button {
-        align-self: center;
-        padding: 10px 20px;
+    .button-container{
+        margin-left: 30%;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .booking-button {
-        align-self: right;
+    .contact-button {
+        align-self: center;
         padding: 10px 20px;
     }
 
@@ -3732,16 +3736,23 @@ hr.border-2 {
         justify-content: space-between;
     }
 
+    .button-container{
+        margin-left: 20%;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .contact-button {
-        position: absolute;
-        align-self: center;
-        padding: 10px 20px;
+        position: relative;
+        align-self: center !important;
+        padding: 2% 4%;
+        margin: 0%;
     }
 
     .booking-button {
-        position: absolute;
-        align-self: right;
-        padding: 10px 20px;
+        position: relative;
+        align-self: right !important;
+        padding: 2% 4%;
     }
 
     /* Contact Section Animations */
@@ -4272,10 +4283,22 @@ hr.border-2 {
         padding: 0 7.5%;
     }
 
+    .button-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .contact-button {
         align-self: center;
         padding: 2% 6%;
         margin-bottom: 5%;
+    }
+
+    .booking-button {
+        padding: 2% 6%;
+        margin-bottom: 5%;
+        align-self: right;
     }
 
     .leads-collection{
