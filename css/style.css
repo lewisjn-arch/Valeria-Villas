@@ -3230,6 +3230,13 @@ hr.border-2 {
     .contact-button {
         align-self: center;
         padding: 10px 20px;
+        margin: 0%;
+    }
+
+    .booking-button {
+        position: relative;
+        align-self: right !important;
+        padding: 2% 4%;
     }
 
     /* Contact Section Animations */
