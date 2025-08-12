@@ -68,6 +68,7 @@ $(function() {
         $(".navbar-collapse").removeClass("show");
     });
     
+    
     // Close mobile menu "on click"
     $(function(){ 
          var navMain = $(".navbar-collapse");
@@ -783,6 +784,7 @@ document.addEventListener("DOMContentLoaded", () => {
             contactButton.textContent = "Get in Touch";
         }, 500); // Delay for 0.5 seconds
     });
+    
 
     // Button click/touch styling logic
     const buttons = document.querySelectorAll(".contact-button, .message-button, .calculate-btn");
