@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Coming Soon</title>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NSRKBCMF');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- <link rel="shortcut icon" href="img/favicon.png" /> -->
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSRKBCMF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>#
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Preloader -->
+    <div class="preloader-bg"></div><div id="preloader"><div id="preloader-status"><div class="preloader-position loader"><span></span></div></div></div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <!-- Logo -->
+        <div class="logo-wrapper valign">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo2.png" class="logo-scroll" alt="Valeria Villas">
+                    <img src="img/logo.png" class="logo-img" alt="Valeria Villas">
+                </a>
+            </div>
+        </div>
+        <!-- Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navbar-toggler-icon">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ms-auto">
+                <!-- <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#services">Amenities</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#downloads">Links</a></li>
+                <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+        <!-- Header Banner -->
+        <section class="banner-header banner-img valign bg-img bg-fixed" data-overlay-darkgray="5" data-background="img/banners/banner.jpg">
+            <!-- Left Panel -->
+            <div class="left-panel"></div>
+        </section> 
+        <section class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12 text-center mx-auto">
+                        <h3 class="section-title" style="margin-top: 5%; margin-bottom: 5%">Thinking of investing in Ruiru?</h3>
+                        <h6>See how Valeria Villas blends luxury, location, and value in every 4-bed maisonette. Dive into the details here.</h6>
+                        <!--<a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJgdJQQ-s0myIhYfX2u8DqnxQ44CcSQptlgt1hVS2XnU91Pg/formResponse?pli=1" class="custom-btn btn button button--atlas mt-2 ms-auto">
+                            <span>Apply Here</span>
+                            <div class="marquee" aria-hidden="true">
+                                <div class="marquee__inner">
+                                    <span>Apply Now</span>
+                                    <span>Apply Now</span>
+                                    <span>Apply Now</span>
+                                    <span>Apply Now</span>
+                                </div>
+                            </div>
+                        </a>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gallery" class="projects section-padding" data-scroll-index="2">
+            <div class="gallery-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+                <a href="phase1.html" class="item">
+                    <div class="position-re o-hidden">
+                        <img src="img/projects/1.jpg" alt="">
+                    </div>
+                    <div class="con">
+                        <h6>Valeria Villas</h6>
+                        <h5>Phase 1</h5>
+                        <div class="line"></div>
+                        <i class="ti-arrow-right"></i>
+                    </div>
+                </a>
+                <a href="phase2.html" class="item">
+                    <div class="position-re o-hidden">
+                        <img src="img/projects/2.jpg" alt="">
+                    </div>
+                    <div class="con">
+                        <h6>Valeria Villas</h6>
+                        <h5>Phase 2</h5>
+                        <div class="line"></div>
+                        <i class="ti-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+        
+        <!-- Footer -->
+        <footer class="main-footer dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="item fotcont">
+                            <div class="fothead">
+                                <h6>Phone</h6>
+                            </div>
+                            <p class="fothead"><a href="https://wa.me/0706254026"> +254706254026</a><br>
+                            <a href="tel:+254706254043">+254706254043</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item fotcont">
+                            <div class="fothead">
+                                <h6>Email</h6>
+                            </div>
+                            <p class="fothead"><a href="mailto:sales@valeriavillas.com">sales@valeriavillas.com</a><br>
+                            <a href="mailto:admin@valeriavillas.com">admin@valeriavillas.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item fotcont">
+                            <div class="fothead">
+                                <h6>Our Address:</h6>
+                            </div>
+                            <p>The Triple Two Address,</p>
+                            <p class="fothead"><a href="https://share.google/vZLW0hpy23buA5OHi">Two, First Floor</a><br>
+                            <a href="https://share.google/jml3z749jjEyEy9BO">Eastern Bypass, Ruiru.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 abot">
+                            <div class="social-icon">
+                                <a href="https://wa.me/254706254026" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/valeria_villas_kenya"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://x.com/ValeriaVillasKE"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UCDm1dakKg1krNrRLODVB7hA"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/company/valeria-villas/"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.tiktok.com/@valeria_villas_kenya?lang=en"><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="https://www.facebook.com/ValeriaVillasKenya"><i class="fa-brands fa-facebook"></i></a>
+                            </div> 
+                        </div>
+                        <div class="footer-terms">
+                            <div class="text-left">
+                                <p>© 2025 All rights reserved.</p>
+                            </div>
+                            <p class="right"><a href="#">Terms &amp; Conditions</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- jQuery -->
+    <script src="Js/jquery-3.6.3.min.js"></script>
+    <script src="Js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="Js/modernizr-2.6.2.min.js"></script>
+    <script src="Js/imagesloaded.pkgd.min.js"></script>
+    <script src="Js/jquery.isotope.v3.0.2.js"></script>
+    <script src="Js/popper.min.js"></script>
+    <script src="Js/bootstrap.min.js"></script>
+    <script src="Js/scrollIt.min.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/init.js"></script>
+    <script src="Js/jquery.waypoints.min.js"></script>
+    <script src="Js/owl.carousel.min.js"></script>
+    <script src="Js/jquery.stellar.min.js"></script>
+    <script src="Js/jquery.magnific-popup.js"></script>
+    <script src="Js/YouTubePopUp.js"></script>
+    <script src="Js/before-after.js"></script>
+    <script src="Js/custom.js"></script>
+</body>
+</html>
