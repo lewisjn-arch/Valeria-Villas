@@ -41,7 +41,7 @@
             <div class="logo">
                 <a href="index.html">
                     <img src="img/logo2.png" class="logo-scroll" alt="Valeria Villas">
-                    <img src="img/logo.png" class="logo-img" alt="Valeria Villas">
+                    <img src="img/logo.png" class="logo-img" alt="Valeria Villas logo">
                 </a>
             </div>
         </div>
@@ -104,7 +104,7 @@
             <div class="owl-carousel owl-theme">
                 <a href="phase1.html" class="item">
                     <div class="position-re o-hidden">
-                        <img src="img/projects/1.jpg" alt="">
+                        <img src="img/projects/1.jpg" alt="Luxury Valeria Villas Estate phase 1 in Ruiru front view">
                     </div>
                     <div class="con">
                         <h6>Valeria Villas</h6>
@@ -115,7 +115,7 @@
                 </a>
                 <a href="phase2.html" class="item">
                     <div class="position-re o-hidden">
-                        <img src="img/projects/2.jpg" alt="">
+                        <img src="img/projects/2.jpg" alt="Luxury Valeria Villas Estate phase 2 in Ruiru front view">
                     </div>
                     <div class="con">
                         <h6>Valeria Villas</h6>
