@@ -622,7 +622,7 @@
                     <div class="leads-collection animate-box" data-animate-effect="fadeInUp">
                         <div class="button-container">
                             <button id="contact-button" onclick="toggleForm()" class="contact-button">Get in Touch</button>
-                            <button id="booking-button"class="booking-button"><a href="https://lhinga75.zohobookings.com/#/valeriavillas ">Book a Site Visit</a></button>
+                            <button id="booking-button"class="booking-button"><a href="https://forms.zohopublic.com/valleriavillas/form/WebVisitFormValeriaVillas/formperma/sIRTudmmwrOAFMUHwSE6mdn5pRNu8A_pIJ-VEtLcNvA">Book a Site Visit</a></button>
                         </div>
                         <!-- <button id="booking-button" class="booking-button">Book a Visit</button> -->
                         <!-- Contact Form and Div Content -->
