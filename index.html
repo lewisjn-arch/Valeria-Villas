@@ -20,6 +20,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 </head>
 <body>
+<!-- First Cookie Consent Popup -->
+<div id="cookiePopup" class="cookie-popup">
+    <div class="cookie-content">
+      <h3>We Value Your Privacy</h3>
+      <p>
+        This website uses cookies to improve your experience, analyze traffic, 
+        and ensure the best service. Please accept or reject cookies. 
+        <a href="cookie-policy.html" target="_blank">Learn more</a>.
+      </p>
+      <div class="cookie-buttons">
+        <button id="acceptCookies">Accept All</button>
+        <button id="rejectCookies">Reject</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Popup for Preferences -->
+  <div id="cookieSettings" class="cookie-popup">
+    <div class="cookie-content">
+      <h3>Cookie Preferences</h3>
+      <p>Choose which cookies you allow. Third-party cookies are always active.</p>
+  
+      <div class="cookie-options">
+        <label>
+          <input type="checkbox" id="functionalCookies" checked>
+          Functional Cookies (site preferences, saved settings)
+        </label><br>
+        <label>
+          <input type="checkbox" id="analyticsCookies">
+          Analytics Cookies (site performance, visitor insights)
+        </label><br>
+        <label>
+          <input type="checkbox" id="marketingCookies">
+          Marketing Cookies (ads, personalization)
+        </label><br>
+        <label>
+          <input type="checkbox" checked disabled>
+          Third-Party Cookies (always active)
+        </label>
+      </div>
+  
+      <div class="cookie-buttons">
+        <button id="saveSettings">Save Preferences</button>
+      </div>
+    </div>
+  </div>
+  
+  
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSRKBCMF"
@@ -121,7 +169,7 @@
         <!-- Left Panel -->
         <div class="left-panel">
             <ul class="social-left clearfix">
-                <li><a href="https://wa.me/254706254026" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://wa.me/+254706254026" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
                 <li><a href="https://www.instagram.com/valeria_villas_kenya/"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="https://x.com/ValeriaVillasKE"><i class="fa-brands fa-x-twitter"></i></a></li>
                 <li><a href="https://www.youtube.com/channel/UCDm1dakKg1krNrRLODVB7hA"><i class="fa-brands fa-youtube"></i></a></li>
@@ -622,7 +670,7 @@
                     <div class="leads-collection animate-box" data-animate-effect="fadeInUp">
                         <div class="button-container">
                             <button id="contact-button" onclick="toggleForm()" class="contact-button">Get in Touch</button>
-                            <button id="booking-button"class="booking-button"><a href="https://forms.zohopublic.com/valleriavillas/form/WebVisitFormValeriaVillas/formperma/sIRTudmmwrOAFMUHwSE6mdn5pRNu8A_pIJ-VEtLcNvA">Book a Site Visit</a></button>
+                            <button id="booking-button"class="booking-button"><a href="https://lhinga75.zohobookings.com/#/valeriavillas">Book a Site Visit</a></button>
                         </div>
                         <!-- <button id="booking-button" class="booking-button">Book a Visit</button> -->
                         <!-- Contact Form and Div Content -->
@@ -671,7 +719,7 @@
                         <div class="col-md-6">
                             <div class="vid-area">
                                 <div class="vid-icon">
-                                    <a class="play-button vid" href="#" onclick="openVideoModal()">
+                                    <a class="play-button vid" href="https://www.youtube.com/embed/FtIBeyHsTE0?si=LSn0zU3KdOB8AjMX" onclick="openVideoModal()">
                                         <svg class="circle-fill">
                                             <circle cx="43" cy="43" r="39" stroke="#fff" stroke-width=".5"></circle>
                                         </svg>
@@ -703,10 +751,10 @@
                 </div>
             </div>
             <!-- Google map -->
-            <!-- <div class="col-md-5 google-map" style="display: flex; flex-direction: column">
-                <span class="map-title" style="font-size: 32px; margin-bottom: 68px; align-self: center">OUR LOCATION</span>
+            <div class="col-md-12 google-map" style="display: flex; flex-direction: column">
+                <span class="map-title" style="font-size: 32px; margin-bottom: 120px; align-self: center">OUR LOCATION</span>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1494.1723025544495!2d37.000229961131005!3d-1.1874806578335775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwMTEnMTcuNiJTIDM3wrAwMCcwMy44IkU!5e0!3m2!1sen!2ske!4v1723203610058!5m2!1sen!2ske" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div> -->
+            </div>
         </section>
         <!-- Clients -->
         <section class="clients">
@@ -727,7 +775,7 @@
                             <div class="fothead">
                                 <h6>Phone</h6>
                             </div>
-                            <p class="fothead"><a href="https://wa.me/0706254026"> +254706254026</a><br>
+                            <p class="fothead"><a href="https://wa.me/+254706254026"> +254706254026</a><br>
                             <a href="tel:+254706254043">+254706254043</a></p>
                         </div>
                     </div>
@@ -757,7 +805,7 @@
                     <div class="row footer-icons">
                         <div class="col-md-6 abot">
                             <div class="social-icon">
-                                <a href="https://wa.me/254706254026" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://wa.me/+254706254026" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                                 <a href="https://www.instagram.com/valeria_villas_kenya/"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="https://x.com/ValeriaVillasKE"><i class="fa-brands fa-x-twitter"></i></a>
                                 <a href="https://www.youtube.com/channel/UCDm1dakKg1krNrRLODVB7hA"><i class="fa-brands fa-youtube"></i></a>
@@ -794,6 +842,61 @@
     <script src="Js/YouTubePopUp.js"></script>
     <script src="Js/before-after.js"></script>
     <script src="Js/custom.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const cookiePopup = document.getElementById("cookiePopup");
+          const cookieSettings = document.getElementById("cookieSettings");
+      
+          const acceptBtn = document.getElementById("acceptCookies");
+          const rejectBtn = document.getElementById("rejectCookies");
+          const saveBtn = document.getElementById("saveSettings");
+      
+          // Cookie categories
+          const functional = document.getElementById("functionalCookies");
+          const analytics = document.getElementById("analyticsCookies");
+          const marketing = document.getElementById("marketingCookies");
+      
+          // Show popup only if no choice saved
+          if (!localStorage.getItem("cookieConsent")) {
+            cookiePopup.style.display = "flex";
+          }
+      
+          // Accept All
+          acceptBtn.addEventListener("click", function () {
+            const consent = {
+              functional: true,
+              analytics: true,
+              marketing: true,
+              thirdParty: true
+            };
+            localStorage.setItem("cookieConsent", JSON.stringify(consent));
+            cookiePopup.style.display = "none";
+            // 👉 Load all cookies here
+          });
+      
+          // Reject → open settings
+          rejectBtn.addEventListener("click", function () {
+            cookiePopup.style.display = "none";
+            cookieSettings.style.display = "flex";
+          });
+      
+          // Save preferences
+          saveBtn.addEventListener("click", function () {
+            const consent = {
+              functional: functional.checked,
+              analytics: analytics.checked,
+              marketing: marketing.checked,
+              thirdParty: true // always active
+            };
+            localStorage.setItem("cookieConsent", JSON.stringify(consent));
+            cookieSettings.style.display = "none";
+            // 👉 Load cookies based on preferences here
+          });
+        });
+      </script>
+      
+      
 </body>
 </html>
 
