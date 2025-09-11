@@ -1742,14 +1742,14 @@ button.mfp-arrow {
 }
 
 .google-map {
-    height: 500px;
-    padding-bottom: 50%;
+    height: 100px;
+    padding-bottom: 15%;
     position: relative;
 }
 
 .google-map iframe {
     margin-top: 50px;
-    height: 50%;
+    height: 90%;
     width: 100%;
     left: 0;
     top: 0;
