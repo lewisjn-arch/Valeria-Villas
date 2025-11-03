@@ -34,55 +34,72 @@
     <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
     <style>
-        table {
-          width: 100%;
-          border-collapse: collapse;
-          margin-top: 1rem;
-          table-layout: fixed; /* keeps table proportional */
-        }
-        
-        th, td {
-          border: 1px solid #ddbe0c;
-          padding: 8px;
-          text-align: left;
-          vertical-align: top;
-          word-break: break-word;
-          font-size: 16px; /* default for desktop */
-          line-height: 1.4;
-        }
-        
+      .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto;
+      }
+    
+      th {
+        border: 1px solid #ddbe0c;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+        white-space: normal; /* allows wrapping instead of stretching */
+        word-break: break-word;
+      }
+      td {
+        border: 1px solid #ddbe0c;
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+        word-break: break-word;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+    
+      th {
+        background-color: #28a745;
+        color: #fff;
+        font-weight: 700;
+      }
+    
+      tr:nth-child(even) {
+        background-color: #070505;
+      }
+    
+      /* --- Mobile Adjustments --- */
+      @media (max-width: 1000px) {
         th {
-          background-color: #28a745;
-          color: #fff;
-          font-weight: 200;
+          font-size: 13px;
+          padding: 6px;
         }
-        
-        tr:nth-child(even) {
-          background-color: #f9f9f9;
+
+       th, td {
+          padding: 2px 6px;
         }
-        
-        /* Make fonts & spacing smaller on smaller screens */
-        @media (max-width: 900px) {
-          th, td {
-            font-size: 16px;
-            padding: 5px;
-          }
+
+        table {
+          min-width: 570px;
         }
-        
-        @media (max-width: 700px) {
-          th, td {
-            font-size: 15px;
-            padding: 4px;
-          }
+      }
+    
+      @media (max-width: 600px) {
+        th {
+          font-size: 13px;
+          padding: 5px;
         }
-        
-        @media (max-width: 400px) {
-          th, td {
-            font-size: 14px;
-            padding: 3px;
-          }
+        table {
+          min-width: 850px;
         }
-        </style>
+      }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 </head>
 <body>
@@ -176,55 +193,55 @@
         <h3 class="section-cookie-span">1. Green Valley Ruiru & Northlands Estates:</h3><p>These gated communities have transformed Ruiru’s landscape. Buyers who invested in off plan houses in 2023 for KShs 4.5M saw values rise to KShs 5.8M by mid-2025—a 29% appreciation.</p>
         <h3 class="section-cookie-span" style="margin-top: 2%; margin-bottom: 2%">2. The Signature Mall & Residences:</h3><p>The completion of this mixed-use development in 2024 created a new commercial and residential node near Kenyatta University. Off plan apartments bought here in late 2022 for KShs 6 M, were valued at KShs 8M by early 2025, representing a 33% increase.</p>
         <h3 class="section-cookie-span" style="margin-top: -1%; margin-bottom: 3%">3. Rental Yields and Long-Term Value:</h3><p>A typical off-plan 4-bedroom all en-suite villa in Ruiru, purchased for KShs 17M in 2023, now generates monthly rental income of KShs 110K–130K. This equates to an 8% gross yield—making off plan real estate a powerful wealth creation tool.</p>
-        <table>
-            <thead>
-            <tr>
-            <th><h8 class="section-cookie-span">Market Segment</h8></th>
-            <th><h8 class="section-cookie-span">2023 Price (Ksh/sm)</h8></th>
-            <th><h8 class="section-cookie-span">2024 Price (Ksh/sm)</h8></th>
-            <th><h8 class="section-cookie-span">Q2 2025 Price (Ksh/sm)</h8></th>
-            <th><h8 class="section-cookie-span">2-Year Appreciation</h8></th>
-            <th><h8 class="section-cookie-span">Value Proposition</h8></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-            <th><h8 class="section-cookie-span">High-End (Kilimani, Lavington)</h8></th>
-            <td>65,000</td>
-            <td>66,500</td>
-            <td>68,000</td>
-            <td>4.6%</td>
-            <td>Stable, but low growth. High entry cost.</td>
-            </tr>
-            <tbody>
-            <tr>
-            <th><h8 class="section-cookie-span">Mid-Tier (Kileleshwa, South B)</h8></th>
-            <td>48,000</td>
-            <td>50,400</td>
-            <td>52,500</td>
-            <td>9.4%</td>
-            <td>Steady growth for lower risk tolerance.</td>
-            </tr>
-            <tbody>
-            <tr>
-            <th><h8 class="section-cookie-span">Thika Road Corridor (Ruiru, Juja)</h8></th>
-            <td>28,000</td>
-            <td>35,400</td>
-            <td>37,500</td>
-            <td>23.2%</td>
-            <td>Highest growth. Affordable entry point.</td>
-            </tr>
-            <tbody>
-            <tr>
-            <th><h8 class="section-cookie-span">Other High-Growth (Syokimau, Athi River)h8></th>
-            <td>30,500</td>
-            <td>33,200</td>
-            <td>35,800</td>
-            <td>17.4%</td>
-            <td>Strong growth, boosted by new infrastructure.</td>
-            </tr>
-            </tbody>
-            </table>
+        <div class="table-responsive">
+          <table>
+              <thead>
+              <tr>
+              <th><h8 class="section-cookie-span">Market Segment</h8></th>
+              <th><h8 class="section-cookie-span">2023 Price (Ksh/sm)</h8></th>
+              <th><h8 class="section-cookie-span">2024 Price (Ksh/sm)</h8></th>
+              <th><h8 class="section-cookie-span">Q2 2025 Price (Ksh/sm)</h8></th>
+              <th><h8 class="section-cookie-span">2-Year Appreciation</h8></th>
+              <th><h8 class="section-cookie-span">Value Proposition</h8></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+              <th><h8 class="section-cookie-span">High-End (Kilimani, Lavington)</h8></th>
+              <td>65,000</td>
+              <td>66,500</td>
+              <td>68,000</td>
+              <td>4.6%</td>
+              <td>Stable, but low growth. High entry cost.</td>
+              </tr>
+              <tr>
+              <th><h8 class="section-cookie-span">Mid-Tier (Kileleshwa, South B)</h8></th>
+              <td>48,000</td>
+              <td>50,400</td>
+              <td>52,500</td>
+              <td>9.4%</td>
+              <td>Steady growth for lower risk tolerance.</td>
+              </tr>
+              <tr>
+              <th><h8 class="section-cookie-span">Thika Road Corridor (Ruiru, Juja)</h8></th>
+              <td>28,000</td>
+              <td>35,400</td>
+              <td>37,500</td>
+              <td>23.2%</td>
+              <td>Highest growth. Affordable entry point.</td>
+              </tr>
+              <tr>
+              <th><h8 class="section-cookie-span">Other High-Growth (Syokimau, Athi River)</h8></th>
+              <td>30,500</td>
+              <td>33,200</td>
+              <td>35,800</td>
+              <td>17.4%</td>
+              <td>Strong growth, boosted by new infrastructure.</td>
+              </tr>
+              </tbody>
+          </table>
+        </div>
+        
 
             <h2 class="section-cookie" style="margin-top: 5%; margin-bottom: 5%">Outlook for 2025 and Beyond</h2>
             <p>As we move through 2025, the momentum is expected to continue, at a potentially more accelerated pace. The focus has continued to be in the Ruiru, Membly, and Mugutha areas, poised for the next wave of growth. The key takeaway from the 2023-2025 period is clear: strategic investment in well-connected, high-demand areas outside the traditional core continues to offer some of the most compelling returns in Nairobi's vibrant property market. With infrastructure and demand aligning, off plan properties continue to offer unmatched opportunities for investors and homeowners alike—and for the savvy buyer, the Thika Road and Ruiru story is a textbook case of capitalizing these trends.</p>

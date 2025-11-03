@@ -35,56 +35,72 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style.css" />
     <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  display: block;
-}
+      .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto;
+      }
+    
+      th {
+        border: 1px solid #ddbe0c;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+        white-space: normal; /* allows wrapping instead of stretching */
+        word-break: break-word;
+      }
+      td {
+        border: 1px solid #ddbe0c;
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+        word-break: break-word;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+    
+      th {
+        background-color: #28a745;
+        color: #fff;
+        font-weight: 700;
+      }
+    
+      tr:nth-child(even) {
+        background-color: #070505;
+      }
+    
+      /* --- Mobile Adjustments --- */
+      @media (max-width: 1000px) {
+        th {
+          font-size: 13px;
+          padding: 6px;
+        }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: auto;
-}
+       th, td {
+          padding: 2px 6px;
+        }
 
-th, td {
-  border: 1px solid #ddbe0c;
-  padding: 8px 10px;
-  text-align: left;
-  font-size: 14px;
-  white-space: normal; /* allows wrapping instead of stretching */
-  word-break: break-word;
-}
-
-th {
-  background-color: #28a745;
-  color: #fff;
-  font-weight: 700;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Make text and spacing smaller on mobile */
-@media (max-width: 768px) {
-  table {
-    font-size: 13px;
-  }
-
-  th, td {
-    padding: 6px 8px;
-  }
-
-  .table-wrapper {
-    overflow-x: auto;
-  }
-}
-
-        </style>
-        
-        
+        table {
+          min-width: 570px;
+        }
+      }
+    
+      @media (max-width: 600px) {
+        th {
+          font-size: 13px;
+          padding: 5px;
+        }
+        table {
+          min-width: 850px;
+        }
+      }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 </head>
 <body>
@@ -205,6 +221,7 @@ tr:nth-child(even) {
 
       <h2 class="section-cookie" style="margin-top: 5%; margin-bottom: 5%">Aligning Financing with Income and Risk Profile</h2>
         <p>An effective financing decision requires alignment with one’s financial stability and risk tolerance:</p>
+        <div class="table-responsive">
         <table>
             <thead>
             <tr>
@@ -233,6 +250,7 @@ tr:nth-child(even) {
             </tr>
             </tbody>
             </table>
+            </div>
 
             <h2 class="section-cookie" style="margin-top: 5%; margin-bottom: 5%">Safeguarding Against Developer Risk</h2>
             <p>The viability of an off-plan investment is intrinsically linked to the developer’s credibility. Before committing to any financing plan, buyers are advised to:</p>
