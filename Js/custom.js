@@ -484,19 +484,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //video modal
-function openVideoModal() {
-    document.getElementById('videoModal').style.display = 'flex';
-    document.getElementById('localVideo').play();
-    document.querySelector('.navbar').classList.add('navbar-hidden');
-}
+// function openVideoModal() {
+//     document.getElementById('videoModal').style.display = 'flex';
+//     document.getElementById('localVideo').play();
+//     document.querySelector('.navbar').classList.add('navbar-hidden');
+// }
 
-function closeVideoModal() {
-    var video = document.getElementById('localVideo');
-    video.pause();
-    video.currentTime = 0;
-    document.getElementById('videoModal').style.display = 'none';
-    document.querySelector('.navbar').classList.remove('navbar-hidden');
-}
+// function closeVideoModal() {
+//     var video = document.getElementById('localVideo');
+//     video.pause();
+//     video.currentTime = 0;
+//     document.getElementById('videoModal').style.display = 'none';
+//     document.querySelector('.navbar').classList.remove('navbar-hidden');
+// }
 
 function toggleForm() {
     const form = document.getElementById("contactForm");
