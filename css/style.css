@@ -446,7 +446,7 @@ blockquote cite:before {
     padding: 2% 0;
 }
 
-.section-padding h6 {
+.section-padding h1 {
     color: #E6A250;
     font-size: 20px;
     margin-bottom: 20px;
@@ -1201,7 +1201,7 @@ blockquote cite:before {
     background: #000000;
 }
 
-.services .item h5 {
+.services .item h2 {
     font-size: 100%;
     width: 100%;
     font-weight: 300;
@@ -1233,7 +1233,7 @@ blockquote cite:before {
     background: #000000;
 }
 
-.drop-button h5{
+.drop-button h2{
     display: flex;
     align-items: flex-start;
 }
@@ -1478,8 +1478,8 @@ blockquote cite:before {
     background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
     background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
 }
-.projects .item .con h6,
-.projects .item .con h6 a {
+.projects .item .con h1,
+.projects .item .con h1 a {
     position: relative;
     color: #E6A250;
     font-size: 13px;
@@ -1489,17 +1489,7 @@ blockquote cite:before {
     letter-spacing: 5px;
     text-transform: uppercase;
 }
-.projects .item .con h5,
-.projects .item .con h5 a {
-    position: relative;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
+
 .projects .item .con p {
     color: #fff;
     font-size: 20px;
@@ -1797,7 +1787,7 @@ word-spacing: 5px;
     position: absolute;
 }
 /* play button */
-.vid-area h5 {
+.vid-area span {
     font-size: 20px;
     font-weight: 300;
     color: #fff;
@@ -2111,21 +2101,21 @@ hr.border-2 {
     background: transparent;
     color: #E6A250;
 }
-.main-footer .fothead h6 {
+.main-footer .fothead p {
     margin-bottom: 0px;
     font-family: 'Oswald', sans-serif;
     color: #E6A250;
     font-size: 17px;
     text-align: center;
 }
-.main-footer .fotcont .fothead h6 {
+.main-footer .fotcont .fothead p {
     font-family: 'Didact Gothic', sans-serif;
     font-weight: 400;
     position: relative;
     padding-bottom: 5px;
     font-size: 16px;
 }
-.main-footer .fotcont .fothead h6:after {
+.main-footer .fotcont .fothead p:after {
     content: '';
     position: absolute;
     right: 0;
