@@ -812,6 +812,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    document.querySelectorAll('.owl-dot').forEach((dot, index) => {
+      dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+    });
+  }, 300);
+});
 
 
 
