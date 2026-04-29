@@ -706,7 +706,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", () => {
     // List of IDs to target
-    const targetSlides = ["bg-img-home1", "bg-img-home2", "bg-img-home3", "bg-img-home4"];
+    const targetSlides = ["bg-img-home2","bg-img-home4"];
 
     const updateBackgroundImages = () => {
         const screenWidth = window.innerWidth;

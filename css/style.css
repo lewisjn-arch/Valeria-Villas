@@ -1478,15 +1478,15 @@ blockquote cite:before {
     background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
     background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
 }
-.projects .item .con h1,
-.projects .item .con h1 a {
+.projects .item .con h2,
+.projects .item .con h2 a {
     position: relative;
-    color: #E6A250;
-    font-size: 13px;
+    color: #ffffff;
+    font-size: 18px;
     font-weight: 400;
     margin-top: 0px;
     margin-bottom: 10px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-transform: uppercase;
 }
 
@@ -1513,9 +1513,9 @@ blockquote cite:before {
 /* line animation */
 .projects .item .line {
     text-align: center;
-    height: 1px;
-    width: 60px;
-    background-color: rgba(255, 255, 255, 0.2);
+    height: 2px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
     transition-property: all;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;

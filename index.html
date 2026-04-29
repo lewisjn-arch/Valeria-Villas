@@ -16,10 +16,21 @@
         })(window,document,'script','dataLayer','GTM-NSRKBCMF');
     </script>
     <!-- End Google Tag Manager -->
-    <link rel="shortcut icon" href="img/favicon.png" />
-    <link rel="stylesheet" href="css/plugins.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <link rel="preload" href="css/plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="preload"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="css/plugins.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    </noscript>
 </head>
 <body>
         <!-- Google Tag Manager (noscript) -->
@@ -28,7 +39,7 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </noscript>
         <!-- End Google Tag Manager (noscript) -->
-<!-- First Cookie Consent Popup -->
+       <!-- First Cookie Consent Popup -->
 <div id="cookiePopup" class="cookie-popup">
     <div class="cookie-content">
       <h3>We Value Your Privacy</h3>
@@ -228,8 +239,7 @@
                                     <img src="img/projects/1.jpg" alt="Luxury Valeria Villas Estate phase 1 in Ruiru front view">
                                 </div>
                                 <div class="con">
-                                    <h1>Valeria Villas</h1>
-                                    <h5>Phase 1</h5>
+                                    <h2>Phase 1</h2>
                                     <div class="line"></div>
                                     <i class="ti-arrow-right"></i>
                                 </div>
@@ -239,8 +249,7 @@
                                     <img src="img/projects/2.jpg" alt="Luxury Valeria Villas Estate phase 2 in Ruiru front view">
                                 </div>
                                 <div class="con">
-                                    <h1>Valeria Villas</h1>
-                                    <h5>Phase 2</h5>
+                                    <h2>Phase 2</h2>
                                     <div class="line"></div>
                                     <i class="ti-arrow-right"></i>
                                 </div>
@@ -721,7 +730,7 @@
                         <div class="col-md-6">
                             <div class="vid-area">
                                 <div class="vid-icon">
-                                    <a class="play-button vid" href="https://www.youtube.com/embed/FtIBeyHsTE0?si=LSn0zU3KdOB8AjMX" onclick="openVideoModal()" aria-label="Check out our project on YouTube">
+                                    <a class="play-button vid" href="https://www.youtube.com/embed/FtIBeyHsTE0?si=LSn0zU3KdOB8AjMX" aria-label="Check out our project on YouTube">
                                         <svg class="circle-fill">
                                             <circle cx="43" cy="43" r="39" stroke="#fff" stroke-width=".5"></circle>
                                         </svg>
