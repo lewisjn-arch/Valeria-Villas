@@ -853,60 +853,6 @@
     <script src="Js/YouTubePopUp.js"></script>
     <script src="Js/before-after.js"></script>
     <script src="Js/custom.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const cookiePopup = document.getElementById("cookiePopup");
-          const cookieSettings = document.getElementById("cookieSettings");
-      
-          const acceptBtn = document.getElementById("acceptCookies");
-          const rejectBtn = document.getElementById("rejectCookies");
-          const saveBtn = document.getElementById("saveSettings");
-      
-          // Cookie categories
-          const functional = document.getElementById("functionalCookies");
-          const analytics = document.getElementById("analyticsCookies");
-          const marketing = document.getElementById("marketingCookies");
-      
-          // Show popup only if no choice saved
-          if (!localStorage.getItem("cookieConsent")) {
-            cookiePopup.style.display = "flex";
-          }
-      
-          // Accept All
-          acceptBtn.addEventListener("click", function () {
-            const consent = {
-              functional: true,
-              analytics: true,
-              marketing: true,
-              thirdParty: true
-            };
-            localStorage.setItem("cookieConsent", JSON.stringify(consent));
-            cookiePopup.style.display = "none";
-            // 👉 Load all cookies here
-          });
-      
-          // Reject → open settings
-          rejectBtn.addEventListener("click", function () {
-            cookiePopup.style.display = "none";
-            cookieSettings.style.display = "flex";
-          });
-      
-          // Save preferences
-          saveBtn.addEventListener("click", function () {
-            const consent = {
-              functional: functional.checked,
-              analytics: analytics.checked,
-              marketing: marketing.checked,
-              thirdParty: true // always active
-            };
-            localStorage.setItem("cookieConsent", JSON.stringify(consent));
-            cookieSettings.style.display = "none";
-            // 👉 Load cookies based on preferences here
-          });
-        });
-      </script>
-      
       
 </body>
 </html>
