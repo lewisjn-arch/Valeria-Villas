@@ -417,9 +417,20 @@ blockquote cite:before {
 /* ======= Owl-Theme custom style ======= */
 .owl-theme .owl-nav.disabled + .owl-dots {
     margin-top: 0px;
-    line-height: .7;
+    line-height: 1;
     display: block;
 }
+
+/* Bigger clickable area */
+.owl-theme .owl-dots .owl-dot {
+    width: 48px;
+    height: 48px;
+    margin: 0 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .owl-theme .owl-dots .owl-dot span {
     width: 8px;
     height: 8px;
@@ -2608,6 +2619,13 @@ hr.border-2 {
 }
 
 .booking-button {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 24px;
+    margin: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     align-self: right;
     background-color: #01674E;
     color: white;
@@ -2616,7 +2634,7 @@ hr.border-2 {
     font-size: 16px;
     border-radius: 5px;
     position: relative;
-    transition: background-color white 0.3s ease, transform 0.5s ease-in-out;
+    transition: background-color 0.3s ease, transform 0.5s ease-in-out;
 }
 
 .booking-button:hover{
@@ -3781,6 +3799,7 @@ hr.border-2 {
     }
 
     .contact-button {
+        min-height:50px;
         position: relative;
         align-self: center !important;
         padding: 2% 4%;
@@ -3788,6 +3807,7 @@ hr.border-2 {
     }
 
     .booking-button {
+        min-height:50px;
         position: relative;
         align-self: right !important;
         padding: 2% 4%;
