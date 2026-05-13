@@ -1226,12 +1226,12 @@ blockquote cite:before {
     margin-bottom: 0;
 }
 .services .item img {
-    width: 60px;
-    margin-bottom: 20px;
+    width: 20%;
+    height: 20%;
 }
 
 .ti-arrow-down {
-    color: #E6A250;
+    color: #383633;
 }
 
 .drop-button{
