@@ -2600,9 +2600,11 @@ hr.border-2 {
 }
 
 .contact-button {
+    min-height: 60px;
+    min-width: auto;
     align-self: left;
-    padding: 10px 20px;
-    margin-bottom: 2.5%;
+    padding: 1% 2%;
+    margin: 2%;
     background-color: #01674E;
     color: white;
     border: 1px solid transparent;
@@ -2634,6 +2636,10 @@ hr.border-2 {
     font-size: 16px;
     border-radius: 5px;
     position: relative;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
     transition: background-color 0.3s ease, transform 0.5s ease-in-out;
 }
 
@@ -3278,7 +3284,7 @@ hr.border-2 {
 
     .contact-button {
         align-self: center;
-        padding: 10px 20px;
+        padding: 1% 2%;
         margin: 0%;
     }
 
@@ -3816,8 +3822,7 @@ hr.border-2 {
         min-height:50px;
         position: relative;
         align-self: center !important;
-        padding: 2% 4%;
-        margin: 0%;
+        padding: 1% 2%;
     }
 
     .booking-button {
@@ -4376,7 +4381,7 @@ hr.border-2 {
 
     .contact-button {
         align-self: center;
-        padding: 2% 6%;
+        padding: 2% 8%;
         margin-bottom: 5%;
     }
 
@@ -4384,8 +4389,8 @@ hr.border-2 {
         padding: 2% 6%;
         margin-bottom: 5%;
         align-self: right;
-        min-height: 48px;
-        min-width: 48px;
+        min-height: 60px;
+        min-width: 60px;
         padding: 12px 24px;
         display: inline-flex;
         align-items: center;
@@ -4508,17 +4513,24 @@ hr.border-2 {
 
   .cookie-popup {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    width: 100vw; height: 100vh;
     background: rgba(0,0,0,0.75);
     display: none;
-    align-items: center;
+    display: flex;
+    align-items: flex-end;
     justify-content: center;
+    padding-bottom: 5%;
     z-index: 9999;
+  }
+
+  .cookie-popup h3,
+  .cookie-popup p,
+  .cookie-popup label  {
+    color: #000;
   }
   
   .cookie-content {
-    background: #fff;
+    background: #ffffff;
     padding: 25px;
     border-radius: 12px;
     max-width: 500px;
@@ -4527,6 +4539,21 @@ hr.border-2 {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .cookie-content a {
+    color: #E6A250;
+    transition: color 0.3s ease;
+  }
+
+  .cookie-content a:hover {
+    color: #01674E;
+  }
+
+  #cookieSettings {
+    display: none;
   }
   
   .cookie-buttons {
@@ -4540,21 +4567,22 @@ hr.border-2 {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
+    color: #FFF;
   }
   
   #acceptCookies {
-    background: #28a745;
-    color: #fff;
+    background: #01674E;
+    color: #ffffff;
   }
   
   #rejectCookies {
-    background: #dc3545;
-    color: #fff;
+    background: #E6A250;
+    color: #ffffff;
   }
   
   #saveSettings {
-    background: #007bff;
-    color: #fff;
+    background: #01674E;
+    color: #ffffff;
   }
   
 .blog-item .blog-btn {

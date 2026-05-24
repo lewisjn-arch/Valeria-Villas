@@ -821,55 +821,119 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-          const cookiePopup = document.getElementById("cookiePopup");
-          const cookieSettings = document.getElementById("cookieSettings");
-      
-          const acceptBtn = document.getElementById("acceptCookies");
-          const rejectBtn = document.getElementById("rejectCookies");
-          const saveBtn = document.getElementById("saveSettings");
-      
-          // Cookie categories
-          const functional = document.getElementById("functionalCookies");
-          const analytics = document.getElementById("analyticsCookies");
-          const marketing = document.getElementById("marketingCookies");
-      
-          // Show popup only if no choice saved
-          if (!localStorage.getItem("cookieConsent")) {
-            cookiePopup.style.display = "flex";
-          }
-      
-          // Accept All
-          acceptBtn.addEventListener("click", function () {
+
+    // MAIN POPUP
+    const cookiePopup = document.getElementById("cookiePopup");
+
+    // PREFERENCES POPUP
+    const cookieSettings = document.getElementById("cookieSettings");
+
+    // BUTTONS
+    const acceptBtn = document.getElementById("acceptCookies");
+    const rejectBtn = document.getElementById("rejectCookies");
+    const saveBtn = document.getElementById("saveSettings");
+
+    // OPEN PREFERENCES LINK
+    const preferencesLink = document.getElementById("openCookieSettings");
+
+    // COOKIE OPTIONS
+    const functional = document.getElementById("functionalCookies");
+    const analytics = document.getElementById("analyticsCookies");
+    const marketing = document.getElementById("marketingCookies");
+
+    // SAFETY CHECK
+    if (!cookiePopup || !cookieSettings) return;
+
+    // SHOW MAIN POPUP ONLY IF NO CONSENT SAVED
+    if (!localStorage.getItem("cookieConsent")) {
+        cookiePopup.style.display = "flex";
+    }
+
+    // HIDE SETTINGS INITIALLY
+    cookieSettings.style.display = "none";
+
+    // ACCEPT ALL
+    if (acceptBtn) {
+
+        acceptBtn.addEventListener("click", function () {
+
             const consent = {
-              functional: true,
-              analytics: true,
-              marketing: true,
-              thirdParty: true
+                functional: true,
+                analytics: true,
+                marketing: true,
+                thirdParty: true
             };
-            localStorage.setItem("cookieConsent", JSON.stringify(consent));
+
+            localStorage.setItem(
+                "cookieConsent",
+                JSON.stringify(consent)
+            );
+
             cookiePopup.style.display = "none";
-            //  Load all cookies here
-          });
-      
-          // Reject → open settings
-          rejectBtn.addEventListener("click", function () {
-            cookiePopup.style.display = "none";
-            cookieSettings.style.display = "flex";
-          });
-      
-          // Save preferences
-          saveBtn.addEventListener("click", function () {
-            const consent = {
-              functional: functional.checked,
-              analytics: analytics.checked,
-              marketing: marketing.checked,
-              thirdParty: true // always active
-            };
-            localStorage.setItem("cookieConsent", JSON.stringify(consent));
-            cookieSettings.style.display = "none";
-            //  Load cookies based on preferences here
-          });
         });
+
+    }
+
+    // REJECT ALL
+    if (rejectBtn) {
+
+        rejectBtn.addEventListener("click", function () {
+
+            const consent = {
+                functional: false,
+                analytics: false,
+                marketing: false,
+                thirdParty: false
+            };
+
+            localStorage.setItem(
+                "cookieConsent",
+                JSON.stringify(consent)
+            );
+
+            cookiePopup.style.display = "none";
+        });
+
+    }
+
+    // OPEN COOKIE PREFERENCES
+    if (preferencesLink) {
+
+        preferencesLink.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            cookiePopup.style.display = "none";
+
+            cookieSettings.style.display = "flex";
+
+        });
+
+    }
+
+    // SAVE PREFERENCES
+    if (saveBtn) {
+
+        saveBtn.addEventListener("click", function () {
+
+            const consent = {
+                functional: functional ? functional.checked : false,
+                analytics: analytics ? analytics.checked : false,
+                marketing: marketing ? marketing.checked : false,
+                thirdParty: true
+            };
+
+            localStorage.setItem(
+                "cookieConsent",
+                JSON.stringify(consent)
+            );
+
+            cookieSettings.style.display = "none";
+        });
+
+    }
+
+});
 
 
 
