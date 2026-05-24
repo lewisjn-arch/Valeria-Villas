@@ -4514,7 +4514,7 @@ hr.border-2 {
   .cookie-popup {
     position: fixed;
     width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.65);
     display: none;
     display: flex;
     align-items: flex-end;
@@ -4544,7 +4544,7 @@ hr.border-2 {
   }
 
   .cookie-content a {
-    color: #E6A250;
+    color: #B8741F;
     transition: color 0.3s ease;
   }
 
@@ -4573,17 +4573,32 @@ hr.border-2 {
   #acceptCookies {
     background: #01674E;
     color: #ffffff;
+    width: 35%;
   }
   
   #rejectCookies {
-    background: #E6A250;
-    color: #ffffff;
+    background: #ffffff;
+    color: #B8741F;
+    width: 35%;
+    border: 2px solid #B8741F;
   }
   
   #saveSettings {
     background: #01674E;
     color: #ffffff;
   }
+
+  #acceptCookies:hover {
+    background: #ffffff;
+    color: #01674E;
+    border: 2px solid #01674E;
+}
+
+#rejectCookies:hover {
+    background: #B8741F;
+    color: #ffffff;
+    border: 2px solid #B8741F;
+}
   
 .blog-item .blog-btn {
     z-index: 2;
