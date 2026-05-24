@@ -2619,8 +2619,8 @@ hr.border-2 {
 }
 
 .booking-button {
-    min-height: 48px;
-    min-width: 48px;
+    min-height: 60px;
+    min-width: 60px;
     padding: 12px 24px;
     margin: 8px;
     display: inline-flex;
@@ -3286,6 +3286,12 @@ hr.border-2 {
         position: relative;
         align-self: right !important;
         padding: 2% 4%;
+        min-height: 60px;
+        min-width: 60px;
+        padding: 12px 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Contact Section Animations */
@@ -3656,6 +3662,14 @@ hr.border-2 {
         border: 2.5px solid #fff;
     }
 
+    .about .about-img .img img {
+    position: relative;
+    z-index: 2;
+    background: #E6A250;
+    height: 100%;
+    width:100%;
+}
+
     .about-img .about-img-2 {
         width: 50% !important;
         padding: 1% 1%;
@@ -3811,6 +3825,11 @@ hr.border-2 {
         position: relative;
         align-self: right !important;
         padding: 2% 4%;
+        min-height: 60px;
+        min-width: 60px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Contact Section Animations */
@@ -4213,6 +4232,14 @@ hr.border-2 {
     .about-img .about-img-2 {
         padding: 1% 2%;
     }
+
+    .about .about-img .img img {
+    position: relative;
+    z-index: 2;
+    background: #E6A250;
+    height: 100%;
+    width:100%;
+}
     
     .about-buro {
         background: #E6A250;
@@ -4357,6 +4384,12 @@ hr.border-2 {
         padding: 2% 6%;
         margin-bottom: 5%;
         align-self: right;
+        min-height: 48px;
+        min-width: 48px;
+        padding: 12px 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .leads-collection{

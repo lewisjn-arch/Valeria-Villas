@@ -848,7 +848,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
             localStorage.setItem("cookieConsent", JSON.stringify(consent));
             cookiePopup.style.display = "none";
-            // 👉 Load all cookies here
+            //  Load all cookies here
           });
       
           // Reject → open settings
@@ -867,7 +867,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
             localStorage.setItem("cookieConsent", JSON.stringify(consent));
             cookieSettings.style.display = "none";
-            // 👉 Load cookies based on preferences here
+            //  Load cookies based on preferences here
           });
         });
 
