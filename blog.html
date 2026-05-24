@@ -16,10 +16,21 @@
         })(window,document,'script','dataLayer','GTM-NSRKBCMF');
     </script>
     <!-- End Google Tag Manager -->
-    <link rel="shortcut icon" href="img/favicon.png" /> 
-    <link rel="stylesheet" href="css/plugins.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/brands.min.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <link rel="preload" href="css/plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="preload"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="css/plugins.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/brands.min.css">
+    </noscript>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -28,52 +39,7 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
-    <!-- First Cookie Consent Popup -->
-<div id="cookiePopup" class="cookie-popup">
-    <div class="cookie-content">
-      <h3>We Value Your Privacy</h3>
-      <p>
-        This website uses cookies to improve your experience, analyze traffic, 
-        and ensure the best service. Please accept or reject cookies. 
-        <a href="cookie-policy.html" target="_blank">Learn more</a>.
-      </p>
-      <div class="cookie-buttons">
-        <button id="acceptCookies">Accept All</button>
-        <button id="rejectCookies">Reject</button>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Second Popup for Preferences -->
-  <div id="cookieSettings" class="cookie-popup">
-    <div class="cookie-content">
-      <h3>Cookie Preferences</h3>
-      <p>Choose which cookies you allow. Third-party cookies are always active.</p>
-  
-      <div class="cookie-options">
-        <label>
-          <input type="checkbox" id="functionalCookies" checked>
-          Functional Cookies (site preferences, saved settings)
-        </label><br>
-        <label>
-          <input type="checkbox" id="analyticsCookies">
-          Analytics Cookies (site performance, visitor insights)
-        </label><br>
-        <label>
-          <input type="checkbox" id="marketingCookies">
-          Marketing Cookies (ads, personalization)
-        </label><br>
-        <label>
-          <input type="checkbox" checked disabled>
-          Third-Party Cookies (always active)
-        </label>
-      </div>
-  
-      <div class="cookie-buttons">
-        <button id="saveSettings">Save Preferences</button>
-      </div>
-    </div>
-  </div>
+    
     <!-- Preloader -->
     <div class="preloader-bg"></div><div id="preloader"><div id="preloader-status"><div class="preloader-position loader"><span></span></div></div></div>
     <!-- Progress scroll totop -->

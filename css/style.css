@@ -2600,11 +2600,7 @@ hr.border-2 {
 }
 
 .contact-button {
-    min-height: 60px;
-    min-width: auto;
     align-self: left;
-    padding: 1% 2%;
-    margin: 2%;
     background-color: #01674E;
     color: white;
     border: 1px solid transparent;
@@ -2621,10 +2617,7 @@ hr.border-2 {
 }
 
 .booking-button {
-    min-height: 60px;
-    min-width: 60px;
     padding: 12px 24px;
-    margin: 8px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -3286,6 +3279,8 @@ hr.border-2 {
         align-self: center;
         padding: 1% 2%;
         margin: 0%;
+        min-height: 60px;
+        width: 40%;
     }
 
     .booking-button {
@@ -3293,8 +3288,7 @@ hr.border-2 {
         align-self: right !important;
         padding: 2% 4%;
         min-height: 60px;
-        min-width: 60px;
-        padding: 12px 24px;
+        width: 40%;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -3719,6 +3713,23 @@ hr.border-2 {
         margin: auto;
     }
 
+    .cookie-content {
+        width: 100dvw;
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .cookie-buttons {
+        display: flex;
+    }
+
+    #acceptCookies,
+    #rejectCookies,
+    #saveSettings {
+        width: 45%;
+        margin: 0;
+    }
+
     .services .row {
         display: flex;
         justify-content: space-between;
@@ -3819,19 +3830,20 @@ hr.border-2 {
     }
 
     .contact-button {
-        min-height:50px;
+        min-height:60px;
         position: relative;
         align-self: center !important;
         padding: 1% 2%;
+        width: 40%;
     }
 
     .booking-button {
         min-height:50px;
         position: relative;
         align-self: right !important;
-        padding: 2% 4%;
+        padding: 1% 2%;
         min-height: 60px;
-        min-width: 60px;
+        width: 40%;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -4381,17 +4393,18 @@ hr.border-2 {
 
     .contact-button {
         align-self: center;
-        padding: 2% 8%;
+        padding: 1% 4%;
         margin-bottom: 5%;
+        min-height: 50px;
+        width: 45%;
     }
 
     .booking-button {
-        padding: 2% 6%;
+        padding: 1% 4%;
         margin-bottom: 5%;
         align-self: right;
-        min-height: 60px;
-        min-width: 60px;
-        padding: 12px 24px;
+        min-height: 50px;
+        width: 45%;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -4513,14 +4526,15 @@ hr.border-2 {
 
   .cookie-popup {
     position: fixed;
-    width: 100vw; height: 100vh;
+    width: 100dvw; height: 100dvh;
     background: rgba(0,0,0,0.65);
     display: none;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 5%;
+    padding-bottom: calc(env(safe-area-inset-bottom) + clamp(80px, 50vw, 80px));
     z-index: 9999;
+    
   }
 
   .cookie-popup h3,
@@ -4557,11 +4571,13 @@ hr.border-2 {
   }
   
   .cookie-buttons {
-    margin-top: 15px;
+    max-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
   }
   
   .cookie-buttons button {
-    margin: 5px;
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
@@ -4571,16 +4587,24 @@ hr.border-2 {
   }
   
   #acceptCookies {
+    height:100%;
     background: #01674E;
     color: #ffffff;
-    width: 35%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #rejectCookies {
+    height: 48px;
     background: #ffffff;
     color: #B8741F;
-    width: 35%;
+    width: 45%;
     border: 2px solid #B8741F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #saveSettings {

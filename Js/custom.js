@@ -84,29 +84,7 @@ $(function() {
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
     });
-    
-    // Isotope Active
-	$('.bauen-project-items').imagesLoaded(function () {
-		// Add isotope on click filter function
-		$('.bauen-project-filter li').on('click', function () {
-			$(".bauen-project-filter li").removeClass("active");
-			$(this).addClass("active");
-			var selector = $(this).attr('data-filter');
-			$(".bauen-project-items").isotope({
-				filter: selector
-				, animationOptions: {
-					duration: 750
-					, easing: 'linear'
-					, queue: false
-				, }
-			});
-			return false;
-		});
-		$(".bauen-project-items").isotope({
-			itemSelector: '.single-item'
-			, layoutMode: 'masonry'
-		, });
-	});
+
     
     // Isotope Active Masonry Gallery
 	$('.bauen-gallery-items').imagesLoaded(function () {
@@ -171,28 +149,6 @@ $(function() {
     // YouTubePopUp
     $("a.vid").YouTubePopUp();
     
-    // Testimonials owlCarousel
-    $('.testimonials .owl-carousel').owlCarousel({
-        loop:true,
-        margin: 30,
-        mouseDrag:true,
-        autoplay: false,
-        dots: true,
-        nav: false,
-        navText: ["<span class='lnr ti-angle-left'></span>","<span class='lnr ti-angle-right'></span>"],
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-    });
     
     // Projects owlCarousel
     $('.projects .owl-carousel').owlCarousel({
@@ -238,72 +194,7 @@ $(function() {
             }
         }
     });
-    
-    
-    // Blog owlCarousel
-    $('.bauen-blog .owl-carousel').owlCarousel({
-        loop: true
-        , margin: 30
-        , mouseDrag: true
-        , autoplay: false
-        , dots: true
-        , responsiveClass: true
-        , responsive: {
-            0: {
-                items: 1
-            , }
-            , 600: {
-                items: 2
-            }
-            , 1000: {
-                items: 2
-            }
-        }
-    });
 
-    // Team owlCarousel
-    $('.team .owl-carousel').owlCarousel({
-        loop: true
-        , margin: 30
-        , dots: true
-        , mouseDrag: true
-        , autoplay: false
-        , responsiveClass: true
-        , responsive: {
-            0: {
-                items: 1,
-                dots: true
-            }
-            , 600: {
-                items: 2
-            }
-            , 1000: {
-                items: 3
-            }
-        }
-    });
-    
-    // Clients owlCarousel
-    $('.clients .owl-carousel').owlCarousel({
-        loop: true
-        , margin: 30
-        , mouseDrag: true
-        , autoplay: true
-        , dots: false
-        , responsiveClass: true
-        , responsive: {
-            0: {
-                margin: 10
-                , items: 3
-            }
-            , 600: {
-                items: 3
-            }
-            , 1000: {
-                items: 5
-            }
-        }
-    });
     
     // MagnificPopup
     $(".img-zoom").magnificPopup({
@@ -720,10 +611,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (screenWidth <= 600) {
                     // Mobile image (3:4 aspect ratio)
-                    imagePath = baseImagePath.replace(".jpg", "-mobile.jpg");
+                    imagePath = baseImagePath.replace(".webp", "-mobile.webp");
                 } else if (screenWidth > 600 && screenWidth <= 1024) {
                     // Tablet image (4:3 aspect ratio)
-                    imagePath = baseImagePath.replace(".jpg", "-tablet.jpg");
+                    imagePath = baseImagePath.replace(".webp", "-tablet.webp");
                 } else {
                     // Desktop image (16:9 aspect ratio)
                     imagePath = baseImagePath;
@@ -825,7 +716,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // MAIN POPUP
     const cookiePopup = document.getElementById("cookiePopup");
 
-    // PREFERENCES POPUP
+    // SETTINGS POPUP
     const cookieSettings = document.getElementById("cookieSettings");
 
     // BUTTONS
@@ -833,7 +724,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const rejectBtn = document.getElementById("rejectCookies");
     const saveBtn = document.getElementById("saveSettings");
 
-    // OPEN PREFERENCES LINK
+    // SETTINGS LINK
     const preferencesLink = document.getElementById("openCookieSettings");
 
     // COOKIE OPTIONS
@@ -844,13 +735,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // SAFETY CHECK
     if (!cookiePopup || !cookieSettings) return;
 
-    // SHOW MAIN POPUP ONLY IF NO CONSENT SAVED
-    if (!localStorage.getItem("cookieConsent")) {
-        cookiePopup.style.display = "flex";
-    }
-
-    // HIDE SETTINGS INITIALLY
+    // ALWAYS HIDE POPUPS INITIALLY
+    cookiePopup.style.display = "none";
     cookieSettings.style.display = "none";
+
+    // CHECK SAVED CONSENT
+    const savedConsent = localStorage.getItem("cookieConsent");
+
+    // SHOW POPUP ONLY IF NO CONSENT EXISTS
+    if (!savedConsent) {
+
+        setTimeout(() => {
+            cookiePopup.style.display = "flex";
+        }, 500);
+
+    }
 
     // ACCEPT ALL
     if (acceptBtn) {
@@ -896,7 +795,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // OPEN COOKIE PREFERENCES
+    // OPEN SETTINGS
     if (preferencesLink) {
 
         preferencesLink.addEventListener("click", function (e) {
@@ -911,7 +810,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // SAVE PREFERENCES
+    // SAVE SETTINGS
     if (saveBtn) {
 
         saveBtn.addEventListener("click", function () {
