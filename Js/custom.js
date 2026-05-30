@@ -834,7 +834,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+window.addEventListener('scroll', () => {
+    const article = document.body.scrollHeight - window.innerHeight;
+    const progress = (window.scrollY / article) * 100;
 
+    document.querySelector('.reading-progress').style.width =
+        progress + '%';
+});
 
 
 
