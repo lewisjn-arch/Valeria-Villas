@@ -40,8 +40,8 @@
             <div class="logo-wrapper valign">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="img/logo2.png" class="logo-scroll" alt="Valeria Villas">
-                        <img src="img/logo.webp" class="logo-img" alt="Valeria Villas Logo">
+                        <img src="../../img/logo2.png" class="logo-scroll" alt="Valeria Villas Logo">
+                        <img src="../../img/logo.webp" class="logo-img" alt="Valeria Villas Logo">
                     </a>
                 </div>
             </div>
@@ -58,13 +58,13 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
                     <!-- <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li> -->
-                    <li class="nav-item"><a class="nav-link active" href="#" data-scroll-nav="0">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="1">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="2">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="3">Amenities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="4">Links</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="6">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#services">Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#downloads">Links</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin/blog/blog.php">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contacts</a></li>
                 </ul>
             </div>
         </nav>
@@ -90,6 +90,15 @@
 
             <section class="article-container">
                 <div class="article-content">
+                    <div class="article-intro">
+                        Ruiru has emerged as one of Kenya's most dynamic property markets,
+                        attracting investors seeking long-term growth, modern infrastructure,
+                        and strong residential demand.
+                    </div>
+                    <div class="article-quote">
+                        Strategic location and infrastructure investment
+                        continue to drive demand in Ruiru.
+                    </div>
                     <p>Ruiru has rapidly transformed into one of Kenya's most attractive real estate destinations.</p>
                     <p>Major infrastructure projects, increasing population growth and demand for modern housing continue to drive property appreciation throughout the region.</p>
                     <p>Investors are increasingly seeking developments that combine accessibility, security and long-term value.</p>
@@ -216,97 +225,96 @@
                     </div>
                 </div>
             </section>
-            <!-- Footer -->
-            <footer class="main-footer dark">
-                <div class="container">
-                    <div class=" footer-contacts">
-                        <div class="col-md-4 mb-30">
-                            <div class="item fotcont">
-                                <div class="fothead">
-                                    <p>Phone</p>
-                                </div>
-                                <p class="fothead"><a href="https://wa.me/+254706254026"> +254706254026</a><br>
-                                <a href="https://wa.me/+254706254043">+254706254043</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-30">
-                            <div class="item fotcont">
-                                <div class="fothead">
-                                    <p>Email</p>
-                                </div>
-                                <p class="fothead"><a href="mailto:sales@valeriavillas.com">sales@valeriavillas.com</a><br>
-                                <a href="mailto:admin@valeriavillas.com">admin@valeriavillas.com</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-30">
-                            <div class="item fotcont">
-                                <div class="fothead">
-                                    <p>Our Address:</p>
-                                </div>
-                                <p>The Triple Two Address,</p>
-                                <p >First Floor, Room A1</p>
-                                <p>Eastern Bypass, Ruiru.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-footer">
-                    <div class="container">
-                        <div class="row footer-icons">
-                            <div class="col-md-6 abot">
-                                <div class="social-icon">
-                                    <a href="https://wa.me/+254706254026" target="_blank" aria-label="Chat with Valeria Villas on Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                                    <a href="https://www.instagram.com/valeria_villas_kenya/" aria-label="Visit Valeria Villas'  instagram page"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="https://x.com/ValeriaVillasKE" aria-label="Banter with Valeria Villas on twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCDm1dakKg1krNrRLODVB7hA" aria-label="Check out our latest videos on YouTube"><i class="fa-brands fa-youtube"></i></a>
-                                    <a href="https://www.linkedin.com/company/valeria-villas/" aria-label="Connect with us professionally on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                                    <a href="https://www.tiktok.com/@valeria_villas_ruiru" aria-label="Check out our latest shorts on Tiktok"><i class="fa-brands fa-tiktok"></i></a>
-                                    <a href="https://www.facebook.com/ValeriaVillasKenya" aria-label="Be part of our family on facebook"><i class="fa-brands fa-facebook"></i></a>
-                                </div>                            
-                            </div>
-                            <div class="footer-terms">
-                                <div class="text-left">
-                                    <p>© 2026 All rights reserved.</p>
-                                </div>
-                                <p class="right"><a href="terms&conditions.html">Terms &amp; Conditions</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-            
-            <script src="../../Js/jquery-3.6.3.min.js"></script>
-            <script src="../../Js/popper.min.js"></script>
-            <script src="../../Js/bootstrap.min.js"></script>
-            <script src="../../Js/imagesloaded.pkgd.min.js"></script>
-            <script src="../../Js/owl.carousel.min.js"></script>
-            <script src="../../Js/jquery.isotope.v3.0.2.js"></script>
-            <script src="../../Js/jquery.magnific-popup.js"></script>
-            <script src="../../Js/YouTubePopUp.js"></script>
-            <script src="../../Js/scrollIt.min.js"></script>
-            <script src="../../Js/jquery.waypoints.min.js"></script>
-            <script src="../../Js/custom.js"></script>
-            <script>
-            $('.related-carousel').owlCarousel({
-                loop:true,
-                margin:30,
-                nav:true,
-                dots:false,
-
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:2
-                    },
-                    1200:{
-                        items:3
-                    }
-                }
-            });
-            </script>
         </div>
+        <!-- Footer -->
+        <footer class="main-footer dark">
+            <div class="container">
+                <div class=" footer-contacts">
+                    <div class="col-md-4 mb-30">
+                        <div class="item fotcont">
+                            <div class="fothead">
+                                <p>Phone</p>
+                            </div>
+                            <p class="fothead"><a href="https://wa.me/+254706254026"> +254706254026</a><br>
+                            <a href="https://wa.me/+254706254043">+254706254043</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item fotcont">
+                            <div class="fothead">
+                                <p>Email</p>
+                            </div>
+                            <p class="fothead"><a href="mailto:sales@valeriavillas.com">sales@valeriavillas.com</a><br>
+                            <a href="mailto:admin@valeriavillas.com">admin@valeriavillas.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item fotcont">
+                            <div class="fothead">
+                                <p>Our Address:</p>
+                            </div>
+                            <p>The Triple Two Address,</p>
+                            <p >First Floor, Room A1</p>
+                            <p>Eastern Bypass, Ruiru.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="container">
+                    <div class="row footer-icons">
+                        <div class="col-md-6 abot">
+                            <div class="social-icon">
+                                <a href="https://wa.me/+254706254026" target="_blank" aria-label="Chat with Valeria Villas on Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/valeria_villas_kenya/" aria-label="Visit Valeria Villas'  instagram page"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://x.com/ValeriaVillasKE" aria-label="Banter with Valeria Villas on twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UCDm1dakKg1krNrRLODVB7hA" aria-label="Check out our latest videos on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/company/valeria-villas/" aria-label="Connect with us professionally on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.tiktok.com/@valeria_villas_ruiru" aria-label="Check out our latest shorts on Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="https://www.facebook.com/ValeriaVillasKenya" aria-label="Be part of our family on facebook"><i class="fa-brands fa-facebook"></i></a>
+                            </div>                            
+                        </div>
+                        <div class="footer-terms">
+                            <div class="text-left">
+                                <p>© 2026 All rights reserved.</p>
+                            </div>
+                            <p class="right"><a href="terms&conditions.html">Terms &amp; Conditions</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../../Js/jquery-3.6.3.min.js"></script>
+        <script src="../../Js/popper.min.js"></script>
+        <script src="../../Js/bootstrap.min.js"></script>
+        <script src="../../Js/imagesloaded.pkgd.min.js"></script>
+        <script src="../../Js/owl.carousel.min.js"></script>
+        <script src="../../Js/jquery.isotope.v3.0.2.js"></script>
+        <script src="../../Js/jquery.magnific-popup.js"></script>
+        <script src="../../Js/YouTubePopUp.js"></script>
+        <script src="../../Js/scrollIt.min.js"></script>
+        <script src="../../Js/jquery.waypoints.min.js"></script>
+        <script src="../../Js/custom.js"></script>
+        <script>
+        $('.related-carousel').owlCarousel({
+            loop:true,
+            margin:30,
+            nav:true,
+            dots:false,
+
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1200:{
+                    items:3
+                }
+            }
+        });
+        </script>
     </body>
 </html>

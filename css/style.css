@@ -4726,3 +4726,14 @@ th {
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
+.admin-access{
+    margin-left:15px;
+    color:#555;
+    transition:.3s ease;
+}
+
+.admin-access:hover{
+    color:#E6A250;
+    transform:rotate(90deg);
+}

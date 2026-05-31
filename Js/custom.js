@@ -812,16 +812,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // SAVE SETTINGS
     if (saveBtn) {
-
         saveBtn.addEventListener("click", function () {
-
             const consent = {
                 functional: functional ? functional.checked : false,
                 analytics: analytics ? analytics.checked : false,
                 marketing: marketing ? marketing.checked : false,
                 thirdParty: true
             };
-
             localStorage.setItem(
                 "cookieConsent",
                 JSON.stringify(consent)
@@ -829,9 +826,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             cookieSettings.style.display = "none";
         });
-
     }
-
 });
 
 window.addEventListener('scroll', () => {
@@ -841,6 +836,238 @@ window.addEventListener('scroll', () => {
     document.querySelector('.reading-progress').style.width =
         progress + '%';
 });
+
+
+const seoTitle = document.querySelector('input[maxlength="60"]');
+
+const seoDescription = document.querySelector('textarea[maxlength="160"]');
+
+const seoTitleCount = document.getElementById('seoTitleCount');
+
+const seoDescriptionCount = document.getElementById('seoDescriptionCount');
+
+seoTitle.addEventListener('input', () => {
+    seoTitleCount.innerHTML =
+    seoTitle.value.length + " / 60";
+});
+
+seoDescription.addEventListener('input', () => {
+    seoDescriptionCount.innerHTML =
+    seoDescription.value.length + " / 160";
+});
+
+
+const tableModal = document.getElementById('tableModal');
+
+document
+.getElementById('insertTable')
+.addEventListener('click', () => {
+    tableModal.style.display = 'flex';
+});
+
+document
+.getElementById('generateTable')
+.addEventListener('click', () => {
+    const rows =
+    document.getElementById('tableRows').value;
+
+    const cols =
+    document.getElementById('tableCols').value;
+
+    let tableHTML =
+        '<table><thead><tr>';
+
+    for(let i = 1; i <= cols; i++){
+        tableHTML +=
+        '<th>Heading ' + i + '</th>';
+    }
+
+    tableHTML +=
+    '</tr></thead><tbody>';
+
+    for(let r = 1; r <= rows; r++){
+        tableHTML += '<tr>';
+        for(let c = 1; c <= cols; c++){
+            tableHTML += '<td>Data</td>';
+        }
+        tableHTML += '</tr>';
+    }
+
+    tableHTML += '</tbody></table>';
+
+    insertAtCursor(tableHTML);
+    tableModal.style.display = 'none';
+});
+
+document
+.getElementById('featuredImage')
+.addEventListener('change', function(){
+    const file =
+    this.files[0];
+
+    if(!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+        document
+        .getElementById('previewImage')
+        .src = e.target.result;
+
+        document
+        .getElementById('previewImage')
+        .style.display = 'block';
+
+        document
+        .getElementById('previewText')
+        .style.display = 'none';
+    }
+    reader.readAsDataURL(file);
+});
+
+
+const editor = document.querySelector('.article-content-editor');
+document
+.getElementById('insertH2')
+.addEventListener('click', function(){
+    editor.value += `
+<h2>Section Heading</h2>
+`;
+});
+
+document
+.getElementById('insertH3')
+.addEventListener('click', function(){
+    editor.value += `
+<h3>Subheading</h3>
+`;
+});
+
+document
+.getElementById('insertQuote')
+.addEventListener('click', function(){
+    editor.value += `
+<div class="article-quote">
+Important insight goes here.
+</div>
+`;
+});
+
+document
+.getElementById('insertList')
+.addEventListener('click', function(){
+    editor.value += `
+<ul>
+    <li>Point One</li>
+    <li>Point Two</li>
+    <li>Point Three</li>
+</ul>
+`;
+});
+
+
+const titleInput =
+document.getElementById('articleTitle');
+
+const categoryInput =
+document.getElementById('articleCategory');
+
+const contentInput =
+document.getElementById('articleContent');
+
+const previewTitle =
+document.getElementById('previewTitle');
+
+const previewCategory =
+document.querySelector('.preview-category');
+
+const previewContent =
+document.getElementById('previewContent');
+
+titleInput.addEventListener('input', () => {
+    previewTitle.innerHTML =
+    titleInput.value ||
+    'Article Title Preview';
+});
+
+categoryInput.addEventListener('change', () => {
+    previewCategory.innerHTML =
+    categoryInput.value;
+});
+
+contentInput.addEventListener('input', () => {
+    previewContent.innerHTML =
+    contentInput.innerHTML;
+});
+
+
+function insertAtCursor(html) {
+    const selection = window.getSelection();
+
+    if (!selection.rangeCount) return;
+    const range = selection.getRangeAt(0);
+
+    range.deleteContents();
+
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+
+    const fragment = document.createDocumentFragment();
+
+    let node;
+    while ((node = temp.firstChild)) {
+        fragment.appendChild(node);
+    }
+    range.insertNode(fragment);
+}
+
+document
+.getElementById('insertH2')
+.addEventListener('click', () => {
+    insertAtCursor(`
+        <h2>
+            Section Heading
+        </h2>
+    `);
+});
+
+document
+.getElementById('insertH3')
+.addEventListener('click', () => {
+    insertAtCursor(`
+        <h3>
+            Subheading
+        </h3>
+    `);
+});
+
+
+document
+.getElementById('insertQuote')
+.addEventListener('click', () => {
+    insertAtCursor(`
+        <div class="article-quote">
+
+            Important insight goes here.
+
+        </div>
+    `);
+});
+
+
+document
+.getElementById('insertList')
+.addEventListener('click', () => {
+    insertAtCursor(`
+        <ul>
+            <li>Point One</li>
+            <li>Point Two</li>
+            <li>Point Three</li>
+        </ul>
+    `);
+});
+
+
 
 
 
