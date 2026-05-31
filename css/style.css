@@ -4728,12 +4728,14 @@ tr:nth-child(even) {
 }
 
 .admin-access{
-    margin-left:15px;
-    color:#555;
-    transition:.3s ease;
+    display:inline-block;
+    transform-origin:center center;
+    transition:
+    color .3s ease,
+    transform .8s ease;
 }
 
 .admin-access:hover{
     color:#E6A250;
-    transform:rotate(90deg);
+    transform:rotate(360deg);
 }
