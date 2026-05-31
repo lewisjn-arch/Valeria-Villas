@@ -2,11 +2,11 @@
 <html lang="en">
 
     <head>
-        <link rel="shortcut icon" href="../..img/favicon.png">
-        <link rel="stylesheet" href="../../css/plugins.css">
+        <link rel="shortcut icon" href="/img/favicon.png">
         <link rel="stylesheet" href="../../css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+        <link rel="stylesheet" href="../../css/plugins.css">
         <link rel="stylesheet" href="../assets/css/blog.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
     </head>
     <body>
         <!-- Google Tag Manager (noscript) -->
