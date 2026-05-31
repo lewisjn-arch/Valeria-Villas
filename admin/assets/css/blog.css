@@ -16,6 +16,40 @@ body {
 }
 
 /* =====================================
+BLOG PAGE LEFT PANEL OVERRIDES
+===================================== */
+
+body.blog-page .left-panel{
+    background:#E6A250;
+    transition:all .4s ease;
+}
+
+body.blog-page .social-left{
+    background:#E6A250;
+    transition:all .4s ease;
+}
+
+body.blog-page .social-left li a{
+    color:#ffffff;
+    border:1px solid #ffffff;
+}
+
+/* AFTER SCROLL */
+
+body.blog-page .left-panel.panel-scroll{
+    background:#000000;
+}
+
+body.blog-page .left-panel.panel-scroll .social-left{
+    background:#000000;
+}
+
+body.blog-page .left-panel.panel-scroll .social-left li a{
+    color:#afaeae;
+    border:1px solid #afaeae;
+}
+
+/* =====================================
    FEATURED ARTICLE SECTION
 ===================================== */
 
@@ -41,7 +75,7 @@ body {
 
 .featured-content {
     padding: 20px;
-    max-width:700px;
+    max-width:600px;
 }
 
 .featured-content h1 {
@@ -89,7 +123,8 @@ body {
     padding-top:0;
     padding-right:5%;
     padding-bottom:4%;
-    padding-left:120px;
+    padding-left:240px;
+    
 }
 
 .blog-search {

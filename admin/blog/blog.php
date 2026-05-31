@@ -9,10 +9,12 @@ $pageTitle = "Valeria Villas Blog";
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo $pageTitle; ?></title>
         <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/plugins.css">
         <link rel="stylesheet" href="../assets/css/blog.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
     </head>
 
-    <body>
+    <body  class="blog-page">
         <!-- Google Tag Manager (noscript) -->
         <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSRKBCMF"
@@ -33,8 +35,8 @@ $pageTitle = "Valeria Villas Blog";
             <div class="logo-wrapper valign">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="img/logo2.png" class="logo-scroll" alt="Valeria Villas">
-                        <img src="img/logo.webp" class="logo-img" alt="Valeria Villas Logo">
+                        <img src="../../img/logo2.png" class="logo-scroll" alt="Valeria Villas">
+                        <img src="../../img/logo.webp" class="logo-img" alt="Valeria Villas Logo">
                     </a>
                 </div>
             </div>
@@ -50,13 +52,13 @@ $pageTitle = "Valeria Villas Blog";
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#services">Amenities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#links">Links</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#services">Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#links">Links</a></li>
                     <li class="nav-item"><a class="nav-link" href="/admin/blog/blog.php">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#contact">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#contact">Contacts</a></li>
                 </ul>
             </div>
         </nav>
@@ -189,4 +191,18 @@ $pageTitle = "Valeria Villas Blog";
             </div>
         </footer>
     </body>
+    <!-- jQuery -->
+    <!-- Core dependency first -->
+    <script src="Js/preloader.js"></script>    
+    <script src="Js/jquery-3.6.3.min.js"></script>
+    <script src="Js/popper.min.js"></script>
+    <script src="Js/bootstrap.min.js"></script>
+    <script src="Js/imagesloaded.pkgd.min.js" ></script>
+    <script src="Js/owl.carousel.min.js"></script>
+    <script src="Js/jquery.isotope.v3.0.2.js" ></script>
+    <script src="Js/jquery.magnific-popup.js" ></script>
+    <script src="Js/YouTubePopUp.js" ></script>
+    <script src="Js/scrollIt.min.js" ></script>
+    <script src="Js/jquery.waypoints.min.js" ></script>
+    <script src="Js/custom.js"></script> 
 </html>

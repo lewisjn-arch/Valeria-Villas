@@ -1067,6 +1067,17 @@ document
     `);
 });
 
+window.addEventListener('scroll', function(){
+
+    const panel = document.querySelector('.left-panel');
+
+    if(window.scrollY > 100){
+        panel.classList.add('panel-scroll');
+    } else {
+        panel.classList.remove('panel-scroll');
+    }
+});
+
 
 
 
