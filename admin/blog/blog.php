@@ -53,12 +53,12 @@ $pageTitle = "Valeria Villas Blog";
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="/index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#services">Amenities</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#links">Links</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/admin/blog/blog.php">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/admin/blog/blog.php">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index.html#contact">Contacts</a></li>
                 </ul>
             </div>

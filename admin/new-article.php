@@ -1,13 +1,38 @@
+<?php
+
+require_once 'includes/db.php';
+
+$article = [];
+
+if(isset($_GET['id']))
+{
+    $stmt =
+    $pdo->prepare(
+        "SELECT * FROM articles WHERE id=?"
+    );
+
+    $stmt->execute([
+        $_GET['id']
+    ]);
+
+    $article =
+    $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>New Article</title>
+        ,<title>New Article</title>
         <link rel="shortcut icon" href="/img/favicon.png">
+        <link rel="stylesheet" href="../css/plugins.css">
+        <link rel="stylesheet" href="../css/style.css">        
         <link rel="stylesheet" href="assets/css/blog.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
     </head>
-    <body  class="blog-page">
+    <body class="admin-page">
         <!-- Google Tag Manager (noscript) -->
         <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSRKBCMF"
@@ -26,10 +51,9 @@
         <nav class="navbar navbar-expand-lg">
             <!-- Logo -->
             <div class="logo-wrapper valign">
-                <div class="logo">
+                <div class="sidebar-logo">
                     <a href="index.html">
-                        <img src="../../img/logo2.png" class="logo-scroll" alt="Valeria Villas">
-                        <img src="../../img/logo.webp" class="logo-img" alt="Valeria Villas Logo">
+                        <img src="../img/logo.webp" class="logo-img" alt="Valeria Villas Logo">
                     </a>
                 </div>
             </div>
@@ -45,13 +69,8 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="/index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index.html#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index.html#services">Amenities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index.html#links">Links</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/admin/blog/blog.php">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index.html#contact">Contacts</a></li>
+                    <li class="nav-item"><span class="nav-link active">Logged in as Admin</span></li>
+                    <li class="nav-item"><a class="nav-link logout-link" href="logout.php">Logout</a></li>
                 </ul>
             </div>
         </nav>
@@ -74,10 +93,11 @@
                     <p>Draft, preview and publish articles directly to the Valeria Villas blog.</p>
                 </div>
                 <div class="editor-layout">
-                    <form class="article-editor">
+                    <form class="article-editor" action="includes/save-article.php" method="POST">
+                        <input type="hidden" name="article_id" id="article_id" value="<?= isset($article['id']) ? $article['id'] : '' ?>">
                         <div class="editor-group">
                             <label>Featured Image</label>
-                            <input type="file" id="featuredImage" accept="image/*">
+                            <input type="file" name="featuredImage" id="featuredImage" accept="image/*">
                             <div class="image-preview">
                                 <img id="previewImage" style="display:none;">
                                 <span id="previewText">No Image Selected</span>
@@ -85,17 +105,17 @@
                         </div>
                         <div class="editor-group">
                             <label>Article Title</label>
-                            <input type="text" id="articleTitle" maxlength="120" placeholder="Enter article title">
+                            <input type="text" name="title" id="articleTitle" maxlength="120" placeholder="Enter article title" value="<?= $article['title'] ?? '' ?>">
                         </div>
 
                         <div class="editor-group">
                             <label>Category</label>
-                            <select id="articleCategory">
+                            <select id="articleCategory" name="category">
                                 <option>Investment</option>
-                                <option>Architecture</option>
+                                <option>Design</option>
                                 <option>Construction</option>
-                                <option>Luxury Living</option>
-                                <option>Real Estate News</option>
+                                <option>Finance</option>
+                                <option>Lifestyle</option>
                             </select>
                         </div>
 
@@ -104,7 +124,7 @@
                                 <label>SEO Meta Title</label>
                                 <span id="seoTitleCount">0 / 60</span>
                             </div>
-                            <input type="text" maxlength="60" placeholder="Maximum 60 characters">
+                            <input type="text" name="seo_title" maxlength="60" placeholder="Maximum 60 characters">
                         </div>
 
                         <div class="editor-group">
@@ -112,7 +132,7 @@
                                 <label>SEO Meta Description</label>
                                 <span id="seoDescriptionCount">0 / 160</span>
                             </div>
-                            <textarea maxlength="160" placeholder="Maximum 160 characters"></textarea>
+                            <textarea maxlength="160" name="seo_description" placeholder="Maximum 160 characters"></textarea>
                         </div>
 
                         <div class="editor-group">
@@ -125,13 +145,16 @@
                                 <button type="button" id="insertTable">Table</button>
                                 <button type="button" id="insertImage">Image</button>
                             </div>
-                            <div class="article-content-editor" id="articleContent" contenteditable="true"></div>
+                            <div class="article-content-editor" id="articleContent"contenteditable="true">
+                                <?= $article['content'] ?? '' ?>
+                            </div>
+                            <input type="hidden" name="content" id="contentField">
                         </div>
 
                         <div class="editor-actions">
-                            <button type="button" class="draft-btn">Save Draft</button>
-                            <button type="button" class="preview-btn">Preview</button>
-                            <button type="submit" class="publish-btn">Publish</button>
+                            <button type="submit" name="action" value="draft" class="draft-btn">Save Draft</button>
+                            <button type="button" id="previewBtn" class="preview-btn">Preview Article</button>
+                            <button type="submit" name="action" value="publish" class="publish-btn">Publish Article</button>
                         </div>
                     </form>
                     <div class="live-preview">
@@ -154,5 +177,43 @@
                 <button id="generateTable">Insert Table</button>
             </div>
         </div>
+        <script src="../Js/jquery-3.6.3.min.js"></script>
+        <script src="../Js/popper.min.js"></script>
+        <script src="../Js/bootstrap.min.js"></script>
+        <script src="../Js/custom.js"></script>
+        <script>
+            window.addEventListener('scroll', function(){
+
+                const panel = document.querySelector('.left-panel');
+
+                if(window.scrollY > 100){
+                    panel.classList.add('panel-scroll');
+                }else{
+                    panel.classList.remove('panel-scroll');
+                }
+
+            });
+
+            window.addEventListener('scroll', function(){
+                const panel = document.querySelector('.left-panel');
+                const navbar = document.querySelector('.navbar');
+
+                if(window.scrollY > 100){
+                    panel.classList.add('panel-scroll');
+                    navbar.classList.add('nav-scroll');
+                }else{
+                    panel.classList.remove('panel-scroll');
+                    navbar.classList.remove('nav-scroll');
+                }
+            });
+
+            document.querySelector('.article-editor')
+            .addEventListener('submit', function(){
+
+                document.getElementById('contentField').value =
+                    document.getElementById('articleContent').innerHTML;
+
+            });
+        </script>  
     </body>
 </html>

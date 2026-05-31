@@ -851,6 +851,47 @@ DASHBOARD
 }
 
 /* =====================================
+ADMIN PAGE ONLY
+===================================== */
+
+body.admin-page .navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    background:#E6A250;
+    padding-top:0;
+    padding-right:7%;
+}
+
+body.admin-page .navbar .nav-link{
+    color:#ffffff;
+}
+
+body.admin-page .logo-wrapper{
+    background:#E6A250;
+}
+
+/* disable scroll effect */
+body.admin-page .nav-scroll{
+    background:#E6A250 !important;
+}
+
+/* ADMIN PAGE ONLY */
+body.admin-page .sidebar-logo{
+    padding:5px 10px;
+    text-align:center;
+}
+
+body.admin-page .sidebar-logo img{
+    width:80px;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+
+/* =====================================
 ARTICLE EDITOR
 ===================================== */
 
@@ -1119,13 +1160,15 @@ LIVE PREVIEW
     align-items:start;
 }
 
-.live-preview{
+body.admin-page .live-preview{
     background:#050505;
     border:1px solid #323232;
     padding:40px;
     min-height:800px;
     position:sticky;
-    top:30px;
+    top:120px;
+    height:calc(100vh - 180px);
+    overflow-y:auto;
 }
 
 .preview-category{
