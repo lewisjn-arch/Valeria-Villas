@@ -7,18 +7,30 @@
 body {
     background: #000000;
 }
+.blog-hero,
+.blog-controls,
+.blog-grid,
+.load-more-container{
+    max-width:1700px;
+    margin:auto;
+}
 
 /* =====================================
    FEATURED ARTICLE SECTION
 ===================================== */
 
 .blog-hero {
-    padding: 6% 5%;
+    padding-top:180px;
+    padding-right:5%;
+    padding-bottom:5%;
+    padding-left:120px;
 }
 
-.featured-article {
-    align-items: center;
-    gap: 50px;
+.featured-article{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:80px;
+    align-items:center;
 }
 
 .featured-article img {
@@ -29,6 +41,7 @@ body {
 
 .featured-content {
     padding: 20px;
+    max-width:700px;
 }
 
 .featured-content h1 {
@@ -73,7 +86,10 @@ body {
 ===================================== */
 
 .blog-controls {
-    padding: 0 5% 4% 5%;
+    padding-top:0;
+    padding-right:5%;
+    padding-bottom:4%;
+    padding-left:120px;
 }
 
 .blog-search {
@@ -120,9 +136,12 @@ body {
 ===================================== */
 
 .blog-grid {
-    padding: 4% 5%;
-    display: grid;
-    gap: 30px;
+    padding-top:4%;
+    padding-right:5%;
+    padding-bottom:4%;
+    padding-left:120px;
+    display:grid;
+    gap:30px;
 }
 
 .blog-card {
@@ -1104,10 +1123,23 @@ ALL ARTICLES PAGE
 ===================================== */
 
 @media (min-width: 1200px) {
+    .blog-hero{
+        padding-left:120px;
+    }
 
-    .featured-article {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .blog-controls{
+        padding-left:120px;
+    }
+
+    .blog-grid{
+        padding-left:120px;
+    }
+
+    .featured-article{
+        display:grid;
+        grid-template-columns:1.2fr 1fr;
+        gap:80px;
+        align-items:center;
     }
 
     .blog-grid {
@@ -1133,11 +1165,24 @@ ALL ARTICLES PAGE
 ===================================== */
 
 @media (min-width: 600px) and (max-width: 1200px) {
-
-    .featured-article {
-        display: flex;
-        flex-direction: column;
+    .blog-hero,
+    .blog-controls,
+    .blog-grid{
+        padding-left:40px;
+        padding-right:40px;
     }
+
+    .featured-article{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+    }
+
+    .left-panel{
+        display:none;
+    }
+
+    
 
     .blog-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1170,12 +1215,27 @@ ALL ARTICLES PAGE
 ===================================== */
 
 @media (max-width: 600px) {
-
-    .featured-article {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
+    .blog-hero,
+    .blog-controls,
+    .blog-grid{
+        padding-left:20px;
+        padding-right:20px;
     }
+
+    .featured-article{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    }
+
+    .left-panel{
+        display:none;
+    }
+
+    .featured-content{
+        max-width:100%;
+    }
+
 
     .featured-content h1 {
         font-size: 30px;

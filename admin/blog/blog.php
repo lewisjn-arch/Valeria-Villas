@@ -50,34 +50,32 @@ $pageTitle = "Valeria Villas Blog";
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#" data-scroll-nav="0">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="1">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="2">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="3">Amenities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="4">Links</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#services">Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#links">Links</a></li>
                     <li class="nav-item"><a class="nav-link" href="/admin/blog/blog.php">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="6">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contact">Contacts</a></li>
                 </ul>
             </div>
         </nav>
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <ul class="social-left clearfix">
+                <li><a href="https://wa.me/+254706254026" target="_blank" aria-label="Chat with Valeria Villas on Whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://www.instagram.com/valeria_villas_kenya/" aria-label="Visit Valeria Villas'  instagram page"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://x.com/ValeriaVillasKE" aria-label="Banter with Valeria Villas on twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCDm1dakKg1krNrRLODVB7hA" aria-label="Check out our latest videos on YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/valeria-villas/" aria-label="Connect with us professionally on LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.tiktok.com/@valeria_villas_ruiru" aria-label="Check out our latest shorts on Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="https://www.facebook.com/ValeriaVillasKenya" aria-label="Be part of our family on facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+        </div>
+        <!-- Corner -->
+        <div class="hero-corner"></div>
+        <div class="hero-corner3"></div>
         
-        <header id="home" class="header slider-fade" data-scroll-index="0">
-            <!-- Corner -->
-            <div class="hero-corner"></div>
-            <div class="hero-corner3"></div>
-            <!-- Left Panel -->
-            <div class="left-panel">
-                <ul class="social-left clearfix">
-                    <li><a href="https://wa.me/+254706254026" target="_blank" aria-label="Chat with Valeria Villas on Whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a href="https://www.instagram.com/valeria_villas_kenya/" aria-label="Visit Valeria Villas'  instagram page"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://x.com/ValeriaVillasKE" aria-label="Banter with Valeria Villas on twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCDm1dakKg1krNrRLODVB7hA" aria-label="Check out our latest videos on YouTube"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/valeria-villas/" aria-label="Connect with us professionally on LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://www.tiktok.com/@valeria_villas_ruiru" aria-label="Check out our latest shorts on Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="https://www.facebook.com/ValeriaVillasKenya" aria-label="Be part of our family on facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                </ul>
-            </div>
-        </header>
         <section class="blog-hero">
             <div class="featured-article">
                 <img src="../assets/images/smart-off-plan-investments-kenya.jpeg" alt="Featured Article">
