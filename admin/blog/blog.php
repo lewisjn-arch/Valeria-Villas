@@ -8,6 +8,7 @@ $pageTitle = "Valeria Villas Blog";
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo $pageTitle; ?></title>
+        <link rel="shortcut icon" href="/img/favicon.png">
         <link rel="stylesheet" href="../../css/style.css">
         <link rel="stylesheet" href="../../css/plugins.css">
         <link rel="stylesheet" href="../assets/css/blog.css">
@@ -190,19 +191,45 @@ $pageTitle = "Valeria Villas Blog";
                 </div>
             </div>
         </footer>
-    </body>
-    <!-- jQuery -->
-    <!-- Core dependency first -->
-    <script src="Js/preloader.js"></script>    
-    <script src="Js/jquery-3.6.3.min.js"></script>
-    <script src="Js/popper.min.js"></script>
-    <script src="Js/bootstrap.min.js"></script>
-    <script src="Js/imagesloaded.pkgd.min.js" ></script>
-    <script src="Js/owl.carousel.min.js"></script>
-    <script src="Js/jquery.isotope.v3.0.2.js" ></script>
-    <script src="Js/jquery.magnific-popup.js" ></script>
-    <script src="Js/YouTubePopUp.js" ></script>
-    <script src="Js/scrollIt.min.js" ></script>
-    <script src="Js/jquery.waypoints.min.js" ></script>
-    <script src="Js/custom.js"></script> 
+        <!-- jQuery -->
+        <!-- Core dependency first -->
+        <script src="../../Js/preloader.js"></script>    
+        <script src="../../Js/jquery-3.6.3.min.js"></script>
+        <script src="../../Js/popper.min.js"></script>
+        <script src="../../Js/bootstrap.min.js"></script>
+        <script src="../../Js/imagesloaded.pkgd.min.js" ></script>
+        <script src="../../Js/owl.carousel.min.js"></script>
+        <script src="../../Js/jquery.isotope.v3.0.2.js" ></script>
+        <script src="../../Js/jquery.magnific-popup.js" ></script>
+        <script src="../../Js/YouTubePopUp.js" ></script>
+        <script src="../../Js/scrollIt.min.js" ></script>
+        <script src="../../Js/jquery.waypoints.min.js" ></script>
+        <script src="../../Js/custom.js"></script>
+        <script>
+            window.addEventListener('scroll', function(){
+
+                const panel = document.querySelector('.left-panel');
+
+                if(window.scrollY > 100){
+                    panel.classList.add('panel-scroll');
+                }else{
+                    panel.classList.remove('panel-scroll');
+                }
+
+            });
+
+            window.addEventListener('scroll', function(){
+                const panel = document.querySelector('.left-panel');
+                const navbar = document.querySelector('.navbar');
+
+                if(window.scrollY > 100){
+                    panel.classList.add('panel-scroll');
+                    navbar.classList.add('nav-scroll');
+                }else{
+                    panel.classList.remove('panel-scroll');
+                    navbar.classList.remove('nav-scroll');
+                }
+            });
+        </script>
+    </body> 
 </html>
