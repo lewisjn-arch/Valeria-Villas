@@ -25,7 +25,7 @@ if(isset($_GET['id']))
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        ,<title>New Article</title>
+        <title>New Article</title>
         <link rel="shortcut icon" href="/img/favicon.png">
         <link rel="stylesheet" href="../css/plugins.css">
         <link rel="stylesheet" href="../css/style.css">        
@@ -93,7 +93,7 @@ if(isset($_GET['id']))
                     <p>Draft, preview and publish articles directly to the Valeria Villas blog.</p>
                 </div>
                 <div class="editor-layout">
-                    <form class="article-editor" action="includes/save-article.php" method="POST">
+                    <form class="article-editor" action="includes/save-article.php" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="article_id" id="article_id" value="<?= isset($article['id']) ? $article['id'] : '' ?>">
                         <div class="editor-group">
                             <label>Featured Image</label>
@@ -158,11 +158,10 @@ if(isset($_GET['id']))
                         </div>
                     </form>
                     <div class="live-preview">
+                        <img id="previewImage" class="preview-featured-image" style="display:none;">
                         <span class="preview-category">Investment</span>
                         <h1 id="previewTitle">Article Title Preview</h1>
-                        <div id="previewContent">
-                            Start writing your article to see a live preview...
-                        </div>
+                        <div id="previewContent">Start writing your article to see a live preview...</div>
                     </div>
                 </div>
             </main>
@@ -182,37 +181,75 @@ if(isset($_GET['id']))
         <script src="../Js/bootstrap.min.js"></script>
         <script src="../Js/custom.js"></script>
         <script>
-            window.addEventListener('scroll', function(){
-
-                const panel = document.querySelector('.left-panel');
-
-                if(window.scrollY > 100){
-                    panel.classList.add('panel-scroll');
-                }else{
-                    panel.classList.remove('panel-scroll');
-                }
-
-            });
-
-            window.addEventListener('scroll', function(){
-                const panel = document.querySelector('.left-panel');
-                const navbar = document.querySelector('.navbar');
-
-                if(window.scrollY > 100){
-                    panel.classList.add('panel-scroll');
-                    navbar.classList.add('nav-scroll');
-                }else{
-                    panel.classList.remove('panel-scroll');
-                    navbar.classList.remove('nav-scroll');
-                }
-            });
-
             document.querySelector('.article-editor')
             .addEventListener('submit', function(){
-
                 document.getElementById('contentField').value =
                     document.getElementById('articleContent').innerHTML;
+            });
 
+
+            const articleTitle =
+            document.getElementById('articleTitle');
+
+            const articleCategory =
+            document.getElementById('articleCategory');
+
+            const articleContent =
+            document.getElementById('articleContent');
+
+            const previewTitle =
+            document.getElementById('previewTitle');
+
+            const previewContent =
+            document.getElementById('previewContent');
+
+            const previewCategory =
+            document.querySelector('.preview-category');
+
+
+            articleTitle.addEventListener('input', function(){
+                previewTitle.textContent =
+                    this.value || 'Article Title Preview';
+            });
+
+
+            articleCategory.addEventListener('change', function(){
+                previewCategory.textContent =
+                    this.value;
+            });
+
+
+            articleContent.addEventListener('input', function(){
+                previewContent.innerHTML =
+                    this.innerHTML;
+            });
+
+            const featuredImage =
+            document.getElementById('featuredImage');
+
+            const previewImage =
+            document.getElementById('previewImage');
+
+            const previewText =
+            document.getElementById('previewText');
+
+
+            featuredImage.addEventListener('change', function(e){
+                const file = e.target.files[0];
+
+                if(!file) return;
+                const reader = new FileReader();
+                reader.onload = function(event){
+                    previewImage.src =
+                        event.target.result;
+
+                    previewImage.style.display =
+                        'block';
+
+                    previewText.style.display =
+                        'none';
+                };
+                reader.readAsDataURL(file);
             });
         </script>  
     </body>

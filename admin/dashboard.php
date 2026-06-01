@@ -134,9 +134,8 @@ $drafts = $pdo->query("
                                     <?= $row['updated_at'] ?>
                                 </td>
                                 <td>
-                                    <a
-                                        href="new-article.php?id=<?= $row['id'] ?>"
-                                        class="edit-link">Continue Editing</a>
+                                    <a href="new-article.php?id=<?= $row['id'] ?>" class="edit-link">Continue Editing</a>
+                                    <a href="delete-article.php?id=<?=$draft['id']?>" class="delete-link"onclick="return confirm('Delete this draft permanently?')">Delete</a>
                                 </td>
                             </tr>
                         <?php endwhile; ?>

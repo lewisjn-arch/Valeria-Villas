@@ -840,6 +840,7 @@ DASHBOARD
 .new-article-btn{
     display:inline-block;
     margin-top:40px;
+    margin-bottom:50px;
     background:#01674E;
     color:#ffffff;
     padding:15px 30px;
@@ -848,6 +849,84 @@ DASHBOARD
 .new-article-btn:hover{
 
     background:#E6A250;
+}
+
+.delete-link{
+    color:#E6A250;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.delete-link:hover{
+    color:#ffffff;
+}
+
+.blog-grid.list-view{
+    display:flex;
+    flex-direction:column;
+}
+
+.blog-grid.list-view .blog-card{
+    display:grid;
+    grid-template-columns:350px 1fr;
+}
+
+.blog-grid.list-view .blog-card img{
+    height:100%;
+    min-height:250px;
+}
+
+/* =====================================
+DRAFTS TABLE
+===================================== */
+
+.drafts-section{
+    margin-top:20px;
+}
+
+.drafts-section h2{
+    color:#ffffff;
+    margin-bottom:25px;
+}
+
+.draft-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:#0a0a0a;
+    border:1px solid #E6A250;
+}
+
+.draft-table th{
+    background:#01674E;
+    color:#ffffff;
+    text-align:left;
+    padding:15px;
+    font-weight:600;
+    border:1px solid #E6A250;
+}
+
+.draft-table td{
+    padding:15px;
+    border-bottom:1px solid #323232;
+    color:#afaeae;
+    border-left:1px solid #323232;
+}
+
+.draft-table tr:hover{
+    background:#111111;
+}
+
+.edit-link{
+    color:#E6A250;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.edit-link:hover{
+    color:#ffffff;
 }
 
 /* =====================================
@@ -975,6 +1054,13 @@ ARTICLE EDITOR
 
 .publish-btn:hover{
     background:#E6A250;
+}
+
+.preview-featured-image{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    margin-bottom:25px;
 }
 
 /* =====================================
@@ -1166,7 +1252,7 @@ body.admin-page .live-preview{
     padding:40px;
     min-height:800px;
     position:sticky;
-    top:120px;
+    top:140px;
     height:calc(100vh - 180px);
     overflow-y:auto;
 }
@@ -1217,6 +1303,8 @@ body.admin-page .live-preview{
     border:1px solid #323232;
     padding:12px;
 }
+
+
 
 /* =====================================
 ALL ARTICLES PAGE
@@ -1270,16 +1358,22 @@ ALL ARTICLES PAGE
     padding:80px 0;
 }
 
-.pagination button{
+.pagination a{
     background:#111111;
     border:1px solid #323232;
     color:#ffffff;
     padding:12px 18px;
-    cursor:pointer;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.pagination button.active{
+.pagination a:hover{
+    border-color:#E6A250;
+}
+
+.pagination a.active{
     background:#01674E;
+    color:#ffffff;
 }
 
 /* =====================================
